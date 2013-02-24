@@ -1,5 +1,18 @@
-style "xfdesktop-icon-view"
+gtk_color_scheme = "fg_color:#000000\nbg_color:#cccccc"
+
+style "default"
 {
+	xthickness = 2
+	ythickness = 2
 	XfdesktopIconView::label-radius = 0
+	XfdesktopIconView::label-alpha = 255
+	XfdesktopIconView::selected-label-alpha = 255
+	GtkScrolledWindow::scrollbar-spacing = 0
+	fg[ACTIVE] = @fg_color
+	bg[ACTIVE] = @bg_color
+	base[ACTIVE] = @bg_color
+	text[ACTIVE] = @fg_color
 }
-widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
+class "GtkWidget" style "default"
+
+#bg_pixmap[NORMAL] = "BIGBLU.png"
