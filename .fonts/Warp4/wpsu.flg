@@ -1,0 +1,135 @@
+1  FONTLOG for Workplace Sans
+This file provides detailed information on the Workplace Sans Font Software.
+This information should be distributed along with the Workplace Sans fonts
+and any derivative works.
+
+
+2  Basic Font Information
+Workplace Sans is a semi-condensed sans-serif font, inspired by the OS/2 bitmap
+font "WarpSans". Intended primarily for use as a user interface font, it has 
+been designed to resemble WarpSans as much as reasonably possible when 
+displayed on-screen at comparable sizes.
+
+More information can be found at:
+http://www.altsan.org/creative/fonts/workplace/#wpsu
+
+
+3  ChangeLog
+
+
+17 October 2012 (Alex Taylor) Workplace Sans 0.91
+- (Light) Added vertical overshoots.
+- (Light) A few more characters now included in build.
+- (Bold) Lightened horizontal stems a little.
+- (Bold) Added various Baltic and other characters.
+- Increased horizontal overshoots in Regular and Bold weights.
+- Upped UPM to 1024 (from 1000).
+- Smoothed and reshaped counters throughout.
+- Many glyph tweaks & improvements.
+- Reworked glyph spacing according to Walter Tracy's method.
+
+17 April 2012 (Alex Taylor) - not released
+- (Normal) Tweaked the tail of the 'g' slightly.
+- Fractionally increased the width of the 'N'.
+- Modified the 'w' and 'W' to bring the central vertex up to the full
+  character height.  (This is a slight departure from WarpSans but having
+  them lower just looked ugly.)
+- Changed the 'a' (again).  Now the cross-stroke is slightly higher and
+  flows smoothly into the stem.  The glyph shape has been changed in other
+  subtle ways as well.
+
+12 October 2011 (Alex Taylor) - Workplace Sans 0.9
+- Major redesign of all weights.  Outside curves are lengthened throughout, 
+  and many other glyph-specific changes have been made.
+- Added a number of new characters, mainly in the Latin-2 and Baltic ranges.
+- Added bitmaps for several more character ranges, especially in the bold
+  weight, and fixed some minor problems.
+- (Normal) Regular weight now redrawn with 70upm stroke width.
+- (Light) Shelved the light weight from v0.8x in favour of updating the older
+  0.7 version (redrawn to the new basic designs), returning the stroke width
+  to 50upm.  Partly as a result, the light weight now includes many characters
+  (notably box-drawing, Hebrew and halfwidth Katakana) which the regular and 
+  bold weights do not.
+- (Light) The light weight is auto-hinted whereas the other weights are not
+  (it should not suffer from the irregular-height problem noted below, as this
+  weight does not use any vertical overshoot on top and bottom curves).
+
+29 May 2011 (Alex Taylor) - Workplace Sans 0.81
+- Minor changes to several character shapes, in particular 'a', 'w', 'R'.
+- Fractionally widened the number characters.
+- A couple of additional characters added.
+- Non-bitmap versions are now built with TypeTool version 3; to avoid the
+  previously-encountered difficulties with this version, TrueType font metrics
+  are now set manually instead of automatically calculated, and the font width
+  class is set to "normal" instead of "semi-condensed".
+- Font is no longer auto-hinted on build: the hinting was observed to cause
+  rounded glyphs to appear too tall on some point sizes.  With antialiasing 
+  the hinting is not really necessary, and without antialiasing the bitmapped
+  versions are recommended anyway.
+- (Bold) Bitmap version now includes Cyrillic.
+
+10 January 2011 (Alex Taylor) - Workplace Sans 0.8
+- Unified the version number (currently 0.8) for all weights.
+- Increased caps height from 685 to 700 upm throughout.
+- Major reworking of many glyph shapes, especially Greek and Cyrillic.
+- Redesigned and unified many of the diacritical marks.
+- More tweaks to the glyph spacing.
+- Many characters have been (at least temporarily) removed due to the
+  ongoing design changes.  This includes most arrow, block, box-drawing
+  and graphic characters, various math and symbol characters, several
+  diacritics, much of the Latin-2 and Baltic section, and all of the
+  Hebrew and Japanese characters.
+- (Normal) New Regular weight implemented with wider 80upm strokes throughout.
+- (Light) Renamed original light-weight version to "Workplace Sans Light";
+  strokes fractionally widened (50 to 60 upm).
+- (Bold) Completely redesigned and reimplemented the Bold weight.
+
+4 July 2010 (Alex Taylor) Workplace Sans 0.71 / Workplace Sans Bold 0.4
+- (Normal) Tweaks to a number of glyph shapes, in particular the 1 and the 7.
+  The uppercase P has a slightly wider loop as well.
+- (Normal) Re-tuned the glyph spacing throughout (left/right lead now 70/65pem 
+  for upper/lower-case letters).  In addition, combined (diacritical) forms 
+  should now be spaced more consistently.
+- (Bold) Major update: widened all strokes to more accurately represent the 
+  'bold' nature of the font.
+- (Bold) Reworked a large number of glyph shapes, in particular adding subtle 
+  curves to the ends of the C and S characters, plus various improvements to 
+  other glyphs throughout the font (too many to list).
+- (Bold) Added a number of new glyphs, mostly Latin-2 and Baltic.
+- (EXPERIMENTAL) Now providing alternative builds which include embedded
+  bitmaps.
+
+25 November 2009 (Alex Taylor) Workplace Sans 0.7 / Workplace Sans Bold 0.3
+- Added several hundred new characters; highlights include:
+  . (Normal) Latin Extended A block is now complete
+  . (Normal) Hiragana and Katakana
+  . (Normal) Fullwidth ASCII characters
+  . (Normal) Various symbols, diacritics and punctuation marks
+  . (Normal) A couple of missing characters in Greek and Cyrillic
+  . (Bold) Codepage 437 support is now complete
+  . (Bold) Cyrillic, Greek, various new accents and other symbols
+- (Normal) Improved the shape of the uppercase 'W' by narrowing it slightly.
+- Fixed a couple of errors in OS2EUGL cmap related to the missing Greek/
+  Cyrillic characters.
+- Many minor tweaks and improvements (too numerous to list).
+
+11 November 2009 (Alex Taylor) Workplace Sans 0.6 / Workplace Sans Bold 0.2
+- First OFL-licensed release.
+- Implemented major rework of font design goals; see website for details.
+- (Normal) Tightened glyph spacing (left/right lead is now 65/60pem for 
+  upper/lower-case letters instead of 80).
+- (Bold) Tightened glyph spacing (left/right lead is now 75/70pem for 
+  upper/lower-case letters instead of 80).
+
+
+
+4  Acknowledgements
+(If you make modifications be sure to add your name (N), email (E),
+web-address (W) and description (D). This list is sorted by last name in
+alphabetical order.)
+
+N: Alex Taylor
+E: alex@altsan.org
+W: http://www.altsan.org/creative/fonts/
+D: Designer/Creator
+
