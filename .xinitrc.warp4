@@ -1,0 +1,3 @@
+# Sample .xinitrc file
+xrdb ~/.Xresources &
+/usr/local/bin/xfce4-session

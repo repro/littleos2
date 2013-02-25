@@ -1,0 +1,3 @@
+# Sample .xsession file
+xrdb ~/.Xresources &
+/usr/local/bin/xfce4-session
