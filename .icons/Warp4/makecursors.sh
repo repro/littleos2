@@ -27,7 +27,7 @@ echo "32 14 15 ILLEGAL.png"  | xcursorgen -p src > cursors/cross
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/draped_box
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/exchange
 #echo "32 15 15 MOVE.png"     | xcursorgen -p src > cursors/fleur
-echo "32 28 4 ARROW.png"     | xcursorgen -p src > cursors/fleur
+echo "19 15 2 ARROW.png"     | xcursorgen -p src > cursors/fleur
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/gobbler
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/gumby
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/hand1
@@ -35,7 +35,7 @@ echo "32 28 4 ARROW.png"     | xcursorgen -p src > cursors/fleur
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/heart
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/icon
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/iron_cross
-echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/left_ptr
+echo "19 15  2 ARROW.png"    | xcursorgen -p src > cursors/left_ptr
 echo "32  9  7 SIZEWE.png"   | xcursorgen -p src > cursors/left_side
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/left_tee
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/leftbutton

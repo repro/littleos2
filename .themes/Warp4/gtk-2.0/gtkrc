@@ -15,4 +15,11 @@ style "default"
 }
 class "GtkWidget" style "default"
 
+style "menubar"
+{
+	font_name = "bold"
+#	font_name = "workplace sans bold 11"
+}
+widget_class "*GtkMenuBar*" style "menubar"
+
 #bg_pixmap[NORMAL] = "BIGBLU.png"
