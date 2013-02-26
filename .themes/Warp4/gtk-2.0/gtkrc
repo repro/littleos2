@@ -1,17 +1,25 @@
-gtk_color_scheme = "fg_color:#000000\nbg_color:#cccccc"
+gtk_color_scheme = "black:#000000\ngray:#808080\ngray_light:#cccccc\nwhite:#ffffff\nblue_warp:#2b00aa\nred:#ff0000"
 
 style "default"
 {
-	xthickness = 2
+	xthickness = 1
 	ythickness = 2
 	XfdesktopIconView::label-radius = 0
 	XfdesktopIconView::label-alpha = 255
 	XfdesktopIconView::selected-label-alpha = 255
 	GtkScrolledWindow::scrollbar-spacing = 0
-	fg[ACTIVE] = @fg_color
-	bg[ACTIVE] = @bg_color
-	base[ACTIVE] = @bg_color
-	text[ACTIVE] = @fg_color
+	fg[ACTIVE] = @black
+	bg[ACTIVE] = @gray_light
+	bg[NORMAL] = @gray_light
+#	bg[SELECTED] = @red
+#	bg[INSENSITIVE] = @red
+	bg[PRELIGHT] = @blue_warp
+	base[ACTIVE] = @gray_light
+	base[NORMAL] = @white
+	base[SELECTED] = @gray
+#	base[INSENSITIVE] = @red
+#	base[PRELIGHT] = @red
+	text[ACTIVE] = @black
 }
 class "GtkWidget" style "default"
 
@@ -23,5 +31,11 @@ style "menubar"
 #	font_name = "workplace sans bold 11"
 }
 widget_class "*GtkMenuBar*" style "menubar"
+
+style "pushbutton"
+{
+	font_name = "regular"
+}
+widget_class "*Button*" style "pushbutton"
 
 #bg_pixmap[NORMAL] = "BIGBLU.png"
