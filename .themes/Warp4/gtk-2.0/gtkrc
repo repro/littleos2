@@ -18,7 +18,7 @@ class "GtkWidget" style "default"
 style "menubar"
 {
 	xthickness = 0
-	ythickness = 0
+	ythickness = 2
 	font_name = "bold"
 #	font_name = "workplace sans bold 11"
 }
