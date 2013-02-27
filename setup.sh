@@ -29,6 +29,16 @@ xfconf-query -n -c pointers -p /devwsmouse/RightHanded -s "false" -t bool
 xfconf-query -n -c pointers -p /devwsmouse/RightHanded -s "false" -t bool
 
 xfconf-query -n -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path -s "${HOME}/.local/share/xfce4/backdrops/BIGBLU.png" -t string
-xfconf-query -n -c xfce4-panel -p /panels/panel-1/position -s "p=4;x=0;y=0" -t string
+xfconf-query -n -c xfce4-panel -p /panels -t int -s 1 -a 
+xfconf-query -n -c xfce4-panel -p /panels/panel-1/position -s "p=0;x=0;y=0" -t string
+xfconf-query -n -c xfce4-panel -p /panels/panel-1/nrows -s "1" -t int
+xfconf-query -n -c xfce4-panel -p /panels/panel-1/length -s "100" -t int
+xfconf-query -n -c xfce4-panel -p /panels/panel-1/length-adjust -s "false" -t bool
+xfconf-query -n -c xfce4-panel -p /panels/panel-1/size -s "28" -t int
+xfconf-query -n -c xfce4-panel -p /panels/panel-1/position-locked -s "true" -t bool
+xfconf-query -n -c xfce4-panel -p /panels/panel-1/autohide -s "false" -t bool
+xfconf-query -n -c xfce4-panel -p /panels/panel-1/background-style -s "1" -t int
+xfconf-query -n -c xfce4-panel -p /panels/panel-1/disable-struts -s "false" -t bool
+xfconf-query -n -c xfce4-panel -p /panels/panel-1/mode -s "0" -t int
 
 #xfconf-query -n -c xsettings -p /Net/IconThemeName -s "Warp4" -t string
