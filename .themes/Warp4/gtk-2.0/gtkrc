@@ -2,7 +2,7 @@ gtk_color_scheme = "black:#000000\ngray:#808080\ngray_light:#cccccc\nwhite:#ffff
 
 style "default"
 {
-	xthickness = 1
+	xthickness = 2
 	ythickness = 2
 	XfdesktopIconView::label-radius = 0
 	XfdesktopIconView::label-alpha = 255
@@ -13,7 +13,7 @@ style "default"
 	bg[NORMAL] = @gray_light
 #	bg[SELECTED] = @red
 #	bg[INSENSITIVE] = @red
-	bg[PRELIGHT] = @blue_warp
+#	bg[PRELIGHT] = @blue_warp
 	base[ACTIVE] = @gray_light
 	base[NORMAL] = @white
 	base[SELECTED] = @gray
@@ -22,6 +22,12 @@ style "default"
 	text[ACTIVE] = @black
 }
 class "GtkWidget" style "default"
+
+style "menu"
+{
+	bg[PRELIGHT] = @blue_warp
+}
+widget_class "*GtkMenu*" style "menu"
 
 style "menubar"
 {
