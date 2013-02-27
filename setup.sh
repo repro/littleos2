@@ -1,5 +1,5 @@
 ftp https://github.com/repro/littleos2/archive/master.zip
-unzip master.zip
+unzip -q master.zip
 cp -r littleos2-master/.* .
 echo '#include ".Xresources.warp4"' > .Xresources
 mv .xsession.warp4 .xsession
@@ -28,6 +28,7 @@ xfconf-query -n -c xsettings -p /Net/DoubleClickTime -s "500" -t int
 xfconf-query -n -c pointers -p /devwsmouse/RightHanded -s "false" -t bool
 xfconf-query -n -c pointers -p /devwsmouse/RightHanded -s "false" -t bool
 
-xfconf-query -n -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path -s "~/.local/share/xfce4/backdrops/BIGBLU.png" -t string
+xfconf-query -n -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path -s "${HOME}/.local/share/xfce4/backdrops/BIGBLU.png" -t string
+xfconf-query -n -c xfce4-panel -p /panels/panel-1/position -s "p=4;x=0;y=0" -t string
 
 #xfconf-query -n -c xsettings -p /Net/IconThemeName -s "Warp4" -t string
