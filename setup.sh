@@ -44,7 +44,7 @@ xfconf-query -n -c xfce4-panel -p /panels/panel-1/plugin-ids -t int -s 1 -t int 
 xfconf-query -n -c xfce4-panel -p /plugins/plugin-1 -t string -s "applicationsmenu"
 #xfconf-query -n -c xfce4-panel -p /plugins/plugin-1/button-title -t string -s "Applications Menu"
 xfconf-query -n -c xfce4-panel -p /plugins/plugin-2 -t string -s "separator"
-xfconf-query -n -c xfce4-panel -p /plugins/plugin-2/style -t int -s "6"
+xfconf-query -n -c xfce4-panel -p /plugins/plugin-2/style -t int -s "0"
 xfconf-query -n -c xfce4-panel -p /plugins/plugin-2/expand -t bool -s "true"
 xfconf-query -n -c xfce4-panel -p /plugins/plugin-3 -t string -s "clock"
 xfconf-query -n -c xfce4-panel -p /plugins/plugin-3/digital-format -t string -s "%T"
