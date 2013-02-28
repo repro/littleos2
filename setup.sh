@@ -40,5 +40,17 @@ xfconf-query -n -c xfce4-panel -p /panels/panel-1/autohide -s "false" -t bool
 xfconf-query -n -c xfce4-panel -p /panels/panel-1/background-style -s "1" -t int
 xfconf-query -n -c xfce4-panel -p /panels/panel-1/disable-struts -s "false" -t bool
 xfconf-query -n -c xfce4-panel -p /panels/panel-1/mode -s "0" -t int
+xfconf-query -n -c xfce4-panel -p /panels/panel-1/plugin-ids -t int -s 1 -t int -s 2 -t int -s 3 -a
+xfconf-query -n -c xfce4-panel -p /plugins/plugin-1 -t string -s "applicationsmenu"
+#xfconf-query -n -c xfce4-panel -p /plugins/plugin-1/button-title -t string -s "Applications Menu"
+xfconf-query -n -c xfce4-panel -p /plugins/plugin-2 -t string -s "separator"
+xfconf-query -n -c xfce4-panel -p /plugins/plugin-2/style -t int -s "6"
+xfconf-query -n -c xfce4-panel -p /plugins/plugin-2/expand -t bool -s "true"
+xfconf-query -n -c xfce4-panel -p /plugins/plugin-3 -t string -s "clock"
+xfconf-query -n -c xfce4-panel -p /plugins/plugin-3/digital-format -t string -s "%T"
+xfconf-query -n -c xfce4-panel -p /plugins/plugin-3/mode -t int -s "2"
+xfconf-query -n -c xfce4-panel -p /plugins/plugin-3/show-frame -t bool -s "false"
+
+xfconf-query -n -c xfce4-session -p /general/SaveOnExit -t bool -s "false"
 
 #xfconf-query -n -c xsettings -p /Net/IconThemeName -s "Warp4" -t string

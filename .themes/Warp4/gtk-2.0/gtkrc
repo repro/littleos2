@@ -4,9 +4,6 @@ style "default"
 {
 	xthickness = 2
 	ythickness = 2
-	XfdesktopIconView::label-radius = 0
-	XfdesktopIconView::label-alpha = 255
-	XfdesktopIconView::selected-label-alpha = 255
 	GtkScrolledWindow::scrollbar-spacing = 0
 	fg[ACTIVE] = @black
 	bg[ACTIVE] = @gray_light
@@ -22,6 +19,18 @@ style "default"
 	text[ACTIVE] = @black
 }
 class "GtkWidget" style "default"
+
+style "xfdesktop-icon-view" {
+	XfdesktopIconView::label-radius = 0
+	XfdesktopIconView::label-alpha = 255
+	XfdesktopIconView::selected-label-alpha = 255
+	XfdesktopIconView::tooltip-size = 0
+	XfdesktopIconView::ellipsize-icon-labels = 0
+	XfdesktopIconView::cell-spacing = 6
+	XfdesktopIconView::cell-padding = 6
+	XfdesktopIconView::cell-text-width-proportion = 2.5
+}
+widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
 
 style "menu"
 {
