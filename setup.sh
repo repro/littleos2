@@ -8,7 +8,7 @@ rm -rf master.zip littleos2-master
 
 xfconf-query -n -c xfwm4 -p /general/theme -s "Warp4" -t string
 xfconf-query -n -c xfwm4 -p /general/title_font -s "Workplace Sans Bold 11" -t string
-xfconf-query -n -c xfwm4 -p /general/title_alignment -s "Left" -t string
+xfconf-query -n -c xfwm4 -p /general/title_alignment -s "left" -t string
 xfconf-query -n -c xfwm4 -p /general/button_layout -s "O|CHM" -t string
 xfconf-query -n -c xfwm4 -p /general/snap_to_border -s "false" -t bool
 xfconf-query -n -c xfwm4 -p /general/snap_to_windows -s "false" -t bool
@@ -30,7 +30,7 @@ xfconf-query -n -c pointers -p /devwsmouse/RightHanded -s "false" -t bool
 
 xfconf-query -n -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path -s "${HOME}/.local/share/xfce4/backdrops/BIGBLU.png" -t string
 xfconf-query -n -c xfce4-panel -p /panels -t int -s 1 -a 
-xfconf-query -n -c xfce4-panel -p /panels/panel-1/position -s "p=0;x=0;y=0" -t string
+xfconf-query -n -c xfce4-panel -p /panels/panel-1/position -s "p=4;x=0;y=0" -t string
 xfconf-query -n -c xfce4-panel -p /panels/panel-1/nrows -s "1" -t int
 xfconf-query -n -c xfce4-panel -p /panels/panel-1/length -s "100" -t int
 xfconf-query -n -c xfce4-panel -p /panels/panel-1/length-adjust -s "false" -t bool
