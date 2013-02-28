@@ -55,7 +55,7 @@ echo "32  9  7 SIZEWE.png"   | xcursorgen -p src > cursors/right_side
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/rtl_logo
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/sailboat
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/sb_down_arrow
-#echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/sb_h_double_arrow
+echo "16  7  7 sb_h_double_arrow.png" | xcursorgen -p src > cursors/sb_h_double_arrow
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/sb_left_arrow
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/sb_right_arrow
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/sb_up_arrow
