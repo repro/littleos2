@@ -16,6 +16,6 @@
 
 
 ### In some cases one might use the sample X startup files:
-	cp .xsession.warp4 .xsession
-	cp .xinitrc.warp4 .xinitrc
+	mv .xsession.warp4 .xsession
+	mv .xinitrc.warp4 .xinitrc
 
