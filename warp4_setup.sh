@@ -1,11 +1,3 @@
-ftp https://github.com/repro/littleos2/archive/master.zip
-unzip -q master.zip
-cp -r littleos2-master/.* .
-echo '#include ".Xresources.warp4"' > .Xresources
-mv .xsession.warp4 .xsession
-mv .xinitrc.warp4 .xinitrc
-rm -rf master.zip littleos2-master
-
 xfconf-query -n -c xfwm4 -p /general/theme -s "Warp4" -t string
 xfconf-query -n -c xfwm4 -p /general/title_font -s "Workplace Sans Bold 11" -t string
 xfconf-query -n -c xfwm4 -p /general/title_alignment -s "left" -t string

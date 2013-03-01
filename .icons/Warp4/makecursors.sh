@@ -59,7 +59,7 @@ echo "16  7  7 sb_h_double_arrow.png" | xcursorgen -p src > cursors/sb_h_double_
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/sb_left_arrow
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/sb_right_arrow
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/sb_up_arrow
-#echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/sb_v_double_arrow
+echo "16 7  7 sb_v_double_arrow.png" | xcursorgen -p src > cursors/sb_v_double_arrow
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/shuttle
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/sizing
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/spider
