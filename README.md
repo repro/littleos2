@@ -15,7 +15,10 @@
 	echo '#include ".Xresources.warp4"' >> .Xresources
 
 
-### In some cases one might use the sample X startup files:
+### In some cases one might use the sample X startup files
 	mv .xsession.warp4 .xsession
 	mv .xinitrc.warp4 .xinitrc
 
+
+### Finish installation
+	xfce4-session-logout --logout
