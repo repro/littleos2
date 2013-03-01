@@ -31,7 +31,7 @@ echo "19 15 2 ARROW.png"     | xcursorgen -p src > cursors/fleur
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/gobbler
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/gumby
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/hand1
-#echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/hand2
+echo "18  5  0 hand2.png"    | xcursorgen -p src > cursors/hand2
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/heart
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/icon
 #echo "32 28  4 ARROW.png"    | xcursorgen -p src > cursors/iron_cross
