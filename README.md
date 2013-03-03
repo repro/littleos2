@@ -16,8 +16,8 @@
 ### Install the resource file
 	grep '^#include ".Xresources.warp4"' .Xresources || echo '#include ".Xresources.warp4"' >> .Xresources
 	[ -f .xombrero.conf ] || mv .xombrero.conf.warp4 .xombrero.conf
-	[ -f .xsession ] || mv xsession.warp4 .xsession
-	[ -f .xinitrc ] || mv xinitrc.warp4 .xinitrc
+	[ -f .xsession ] || mv .xsession.warp4 .xsession
+	[ -f .xinitrc ] || mv .xinitrc.warp4 .xinitrc
 	
 
 
