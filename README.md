@@ -13,6 +13,7 @@
 
 ### Install the resource file
 	grep '^#include ".Xresources.warp4"' .Xresources || echo '#include ".Xresources.warp4"' >> .Xresources
+	[ -f .xombrero.conf ] || mv .xombrero.conf.warp4 .xombrero.conf
 
 
 ### In some cases one might use the sample X startup files
