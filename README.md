@@ -12,7 +12,7 @@
 
 
 ### Install the resource file
-	echo '#include ".Xresources.warp4"' >> .Xresources
+	grep '^#include ".Xresources.warp4"' .Xresources || echo '#include ".Xresources.warp4"' >> .Xresources
 
 
 ### In some cases one might use the sample X startup files

@@ -53,4 +53,11 @@ style "pushbutton"
 }
 widget_class "*Button*" style "pushbutton"
 
+style "tooltip"
+{
+	bg[NORMAL] = "#ffff00"
+	fg[NORMAL] = "#000000"
+}
+widget "*tooltip*" style "tooltip"
+
 #bg_pixmap[NORMAL] = "BIGBLU.png"

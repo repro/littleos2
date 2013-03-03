@@ -30,14 +30,15 @@ xfconf-query -c xfce4-desktop -p /plugins -r -R
 xfconf-query -c xfce4-panel -p /panels -s 1 -t int -a -n
 xfconf-query -c xfce4-panel -p /panels/panel-1/autohide -s "false" -t bool -n
 xfconf-query -c xfce4-panel -p /panels/panel-1/background-style -s "0" -t int -n
+xfconf-query -c xfce4-panel -p /panels/panel-1/background-color -r
 #xfconf-query -c xfce4-panel -p /panels/panel-1/background-color -t int -s "52428" -t int -s "52428" -t int -s "52428" -t int -s "65535" -n
-xfconf-query -c xfce4-panel -p /panels/panel-1/background-image -r -R
+xfconf-query -c xfce4-panel -p /panels/panel-1/background-image -r
 xfconf-query -c xfce4-panel -p /panels/panel-1/disable-struts -s "false" -t bool -n
 xfconf-query -c xfce4-panel -p /panels/panel-1/length -s "100" -t int -n
 xfconf-query -c xfce4-panel -p /panels/panel-1/length-adjust -s "false" -t bool -n
 xfconf-query -c xfce4-panel -p /panels/panel-1/mode -s "0" -t int -n
 xfconf-query -c xfce4-panel -p /panels/panel-1/nrows -s "1" -t int -n
-xfconf-query -c xfce4-panel -p /panels/panel-1/plugin-ids -t int -s 1 -t int -s 2 -t int -s 3 -a -n
+xfconf-query -c xfce4-panel -p /panels/panel-1/plugin-ids -t int -s 1 -t int -s 2 -t int -s 3 -t int -s 4 -a -n
 xfconf-query -c xfce4-panel -p /panels/panel-1/position -s "p=4;x=0;y=0" -t string -n
 xfconf-query -c xfce4-panel -p /panels/panel-1/position-locked -s "true" -t bool -n
 xfconf-query -c xfce4-panel -p /panels/panel-1/size -s "28" -t int -n
@@ -48,14 +49,16 @@ xfconf-query -c xfce4-panel -p /plugins/plugin-1/show-tooltips -s "false" -t boo
 xfconf-query -c xfce4-panel -p /plugins/plugin-1/show-button-title -s "true" -t bool -n
 xfconf-query -c xfce4-panel -p /plugins/plugin-1/custom-menu -s "false" -t bool -n
 xfconf-query -c xfce4-panel -p /plugins/plugin-1/custom-menu-file -r -R
-xfconf-query -c xfce4-panel -p /plugins/plugin-1/button-icon -r -R
-xfconf-query -c xfce4-panel -p /plugins/plugin-2 -t string -s "separator" -n
-xfconf-query -c xfce4-panel -p /plugins/plugin-2/expand -t bool -s "true" -n
-xfconf-query -c xfce4-panel -p /plugins/plugin-2/style -t int -s "0" -n
-xfconf-query -c xfce4-panel -p /plugins/plugin-3 -t string -s "clock" -n
-xfconf-query -c xfce4-panel -p /plugins/plugin-3/digital-format -t string -s "%T" -n
-xfconf-query -c xfce4-panel -p /plugins/plugin-3/mode -t int -s "2" -n
-xfconf-query -c xfce4-panel -p /plugins/plugin-3/show-frame -t bool -s "false" -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-1/button-icon -s "xfce4-panel-menu" -t string -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-2 -t string -s "tasklist" -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-3 -t string -s "separator" -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-3/expand -t bool -s "true" -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-3/style -t int -s "0" -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-4 -t string -s "clock" -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-4/digital-format -t string -s "%T" -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-4/mode -t int -s "2" -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-4/tooltip-format -t string -s "%A %d %B %Y" -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-4/show-frame -t bool -s "false" -n
 xfconf-query -c xfce4-session -p /general/SaveOnExit -t bool -s "false" -n
 xfconf-query -c xfce4-session -p /startup/ssh-agent/enabled -t bool -s false -n
 xfconf-query -c xfwm4 -p /general/button_layout -s "O|CHM" -t string -n
