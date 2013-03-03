@@ -1,42 +1,80 @@
-xfconf-query -n -c pointers -p /devwsmouse/RightHanded -s "false" -t bool
-xfconf-query -n -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path -s "${HOME}/.local/share/xfce4/backdrops/BIGBLU.png" -t string
+xfconf-query -c pointers -p /devwsmouse/RightHanded -s "false" -t bool -n
+xfconf-query -c xfce4-desktop -p /backdrop -r -R
+xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/backdrop-cycle-enable -s "false" -t bool -n
+xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/backdrop-cycle-timer -s "10" -t int -n
+xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/brightness -s "1" -t int -n
+xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path -s "${HOME}/.local/share/xfce4/backdrops/BIGBLU.png" -t string -n
+xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-show -s "true" -t bool -n
+xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-style -s 0 -t int -n
+xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/last-single-image -s "${HOME}/.local/share/xfce4/backdrops/BIGBLU.png" -t string -n
+xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/saturation -s "1.0" -t double -n
+xfconf-query -c xfce4-desktop -p /desktop-icons/style -s "2" -t int -n
+xfconf-query -c xfce4-desktop -p /desktop-icons/icon-size -s "36" -t int -n
+xfconf-query -c xfce4-desktop -p /desktop-icons/use-custom-font-size -s "false" -t bool -n
+xfconf-query -c xfce4-desktop -p /desktop-icons/font-size -s "11.0" -t double -n
+xfconf-query -c xfce4-desktop -p /desktop-icons/show-thumbnails -s "false" -t bool -n
+xfconf-query -c xfce4-desktop -p /desktop-icons/single-click -s "false" -t bool -n
+xfconf-query -c xfce4-desktop -p /desktop-icons/file-icons/show-home -s "true" -t bool -n
+xfconf-query -c xfce4-desktop -p /desktop-icons/file-icons/show-filesystem -s "true" -t bool -n
+xfconf-query -c xfce4-desktop -p /desktop-icons/file-icons/show-trash -s "true" -t bool -n
+xfconf-query -c xfce4-desktop -p /desktop-icons/file-icons/show-removable -s "true" -t bool -n
+xfconf-query -c xfce4-desktop -p /desktop-menu/show -s "true" -t bool -n
+xfconf-query -c xfce4-desktop -p /desktop-menu/show-icons -s "false" -t bool -n
+xfconf-query -c xfce4-desktop -p /windowlist-menu/show -s "true" -t bool -n
+xfconf-query -c xfce4-desktop -p /windowlist-menu/show-icons -s "false" -t bool -n
+xfconf-query -c xfce4-desktop -p /windowlist-menu/show-sticky-once -s "true" -t bool -n
+xfconf-query -c xfce4-desktop -p /windowlist-menu/show-submenus -s "false" -t bool -n
+xfconf-query -c xfce4-desktop -p /windowlist-menu/show-workspace-names -s "false" -t bool -n
 xfconf-query -c xfce4-desktop -p /panels -r -R
-xfconf-query -n -c xfce4-panel -p /panels -t int -s 1 -a 
-xfconf-query -n -c xfce4-panel -p /panels/panel-1/autohide -s "false" -t bool
-xfconf-query -n -c xfce4-panel -p /panels/panel-1/background-style -s "1" -t int
-xfconf-query -n -c xfce4-panel -p /panels/panel-1/disable-struts -s "false" -t bool
-xfconf-query -n -c xfce4-panel -p /panels/panel-1/length -s "100" -t int
-xfconf-query -n -c xfce4-panel -p /panels/panel-1/length-adjust -s "false" -t bool
-xfconf-query -n -c xfce4-panel -p /panels/panel-1/mode -s "0" -t int
-xfconf-query -n -c xfce4-panel -p /panels/panel-1/nrows -s "1" -t int
-xfconf-query -n -c xfce4-panel -p /panels/panel-1/plugin-ids -t int -s 1 -t int -s 2 -t int -s 3 -a
-xfconf-query -n -c xfce4-panel -p /panels/panel-1/position -s "p=4;x=0;y=0" -t string
-xfconf-query -n -c xfce4-panel -p /panels/panel-1/position-locked -s "true" -t bool
-xfconf-query -n -c xfce4-panel -p /panels/panel-1/size -s "28" -t int
 xfconf-query -c xfce4-desktop -p /plugins -r -R
-xfconf-query -n -c xfce4-panel -p /plugins/plugin-1 -t string -s "applicationsmenu"
-xfconf-query -n -c xfce4-panel -p /plugins/plugin-2 -t string -s "separator"
-xfconf-query -n -c xfce4-panel -p /plugins/plugin-2/expand -t bool -s "true"
-xfconf-query -n -c xfce4-panel -p /plugins/plugin-2/style -t int -s "0"
-xfconf-query -n -c xfce4-panel -p /plugins/plugin-3 -t string -s "clock"
-xfconf-query -n -c xfce4-panel -p /plugins/plugin-3/digital-format -t string -s "%T"
-xfconf-query -n -c xfce4-panel -p /plugins/plugin-3/mode -t int -s "2"
-xfconf-query -n -c xfce4-panel -p /plugins/plugin-3/show-frame -t bool -s "false"
-xfconf-query -n -c xfce4-session -p /general/SaveOnExit -t bool -s "false"
-xfconf-query -n -c xfwm4 -p /general/button_layout -s "O|CHM" -t string
-xfconf-query -n -c xfwm4 -p /general/snap_to_border -s "false" -t bool
-xfconf-query -n -c xfwm4 -p /general/snap_to_windows -s "false" -t bool
-xfconf-query -n -c xfwm4 -p /general/theme -s "Warp4" -t string
-xfconf-query -n -c xfwm4 -p /general/title_alignment -s "left" -t string
-xfconf-query -n -c xfwm4 -p /general/title_font -s "Workplace Sans Bold 11" -t string
-xfconf-query -n -c xsettings -p /Gtk/ButtonImages -s "false" -t bool
-xfconf-query -n -c xsettings -p /Gtk/CursorThemeName -s "Warp4" -t string
-xfconf-query -n -c xsettings -p /Gtk/FontName -s "Workplace Sans 11" -t string
-xfconf-query -n -c xsettings -p /Gtk/MenuImages -s "false" -t bool
-xfconf-query -n -c xsettings -p /Net/DoubleClickTime -s "500" -t int
-#xfconf-query -n -c xsettings -p /Net/IconThemeName -s "Warp4" -t string
-xfconf-query -n -c xsettings -p /Net/ThemeName -s "Warp4" -t string
-xfconf-query -n -c xsettings -p /Xft/Antialias -s "1" -t int
-xfconf-query -n -c xsettings -p /Xft/DPI -s "96" -t int
-xfconf-query -n -c xsettings -p /Xft/HintStyle -s "hintslight" -t string
-#xfconf-query -n -c xsettings -p /Xft/Hinting -s "-1"
+xfconf-query -c xfce4-panel -p /panels -s 1 -t int -a -n
+xfconf-query -c xfce4-panel -p /panels/panel-1/autohide -s "false" -t bool -n
+xfconf-query -c xfce4-panel -p /panels/panel-1/background-style -s "0" -t int -n
+#xfconf-query -c xfce4-panel -p /panels/panel-1/background-color -t int -s "52428" -t int -s "52428" -t int -s "52428" -t int -s "65535" -n
+xfconf-query -c xfce4-panel -p /panels/panel-1/background-image -r -R
+xfconf-query -c xfce4-panel -p /panels/panel-1/disable-struts -s "false" -t bool -n
+xfconf-query -c xfce4-panel -p /panels/panel-1/length -s "100" -t int -n
+xfconf-query -c xfce4-panel -p /panels/panel-1/length-adjust -s "false" -t bool -n
+xfconf-query -c xfce4-panel -p /panels/panel-1/mode -s "0" -t int -n
+xfconf-query -c xfce4-panel -p /panels/panel-1/nrows -s "1" -t int -n
+xfconf-query -c xfce4-panel -p /panels/panel-1/plugin-ids -t int -s 1 -t int -s 2 -t int -s 3 -a -n
+xfconf-query -c xfce4-panel -p /panels/panel-1/position -s "p=4;x=0;y=0" -t string -n
+xfconf-query -c xfce4-panel -p /panels/panel-1/position-locked -s "true" -t bool -n
+xfconf-query -c xfce4-panel -p /panels/panel-1/size -s "28" -t int -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-1 -t string -s "applicationsmenu" -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-1/show-generic-names -s "false" -t bool -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-1/show-menu-icons -s "false" -t bool -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-1/show-tooltips -s "false" -t bool -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-1/show-button-title -s "true" -t bool -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-1/custom-menu -s "false" -t bool -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-1/custom-menu-file -r -R
+xfconf-query -c xfce4-panel -p /plugins/plugin-1/button-icon -r -R
+xfconf-query -c xfce4-panel -p /plugins/plugin-2 -t string -s "separator" -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-2/expand -t bool -s "true" -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-2/style -t int -s "0" -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-3 -t string -s "clock" -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-3/digital-format -t string -s "%T" -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-3/mode -t int -s "2" -n
+xfconf-query -c xfce4-panel -p /plugins/plugin-3/show-frame -t bool -s "false" -n
+xfconf-query -c xfce4-session -p /general/SaveOnExit -t bool -s "false" -n
+xfconf-query -c xfce4-session -p /startup/ssh-agent/enabled -t bool -s false -n
+xfconf-query -c xfwm4 -p /general/button_layout -s "O|CHM" -t string -n
+xfconf-query -c xfwm4 -p /general/snap_to_border -s "false" -t bool -n
+xfconf-query -c xfwm4 -p /general/snap_to_windows -s "false" -t bool -n
+xfconf-query -c xfwm4 -p /general/theme -s "Warp4" -t string -n
+xfconf-query -c xfwm4 -p /general/title_alignment -s "left" -t string -n
+xfconf-query -c xfwm4 -p /general/title_font -s "Workplace Sans Bold 11" -t string -n
+xfconf-query -c xsettings -p /Gtk/ButtonImages -s "false" -t bool -n
+xfconf-query -c xsettings -p /Gtk/CanChangeAccels -s "false" -t bool -n
+xfconf-query -c xsettings -p /Gtk/CursorThemeName -s "Warp4" -t string -n
+xfconf-query -c xsettings -p /Gtk/FontName -s "Workplace Sans 11" -t string -n
+xfconf-query -c xsettings -p /Gtk/MenuImages -s "false" -t bool -n
+xfconf-query -c xsettings -p /Gtk/ToolbarStyle -s "icons" -t string -n
+xfconf-query -c xsettings -p /Net/DoubleClickTime -s "500" -t int -n
+#xfconf-query -c xsettings -p /Net/IconThemeName -s "Warp4" -t string -n
+xfconf-query -c xsettings -p /Net/ThemeName -s "Warp4" -t string -n
+xfconf-query -c xsettings -p /Xft/Antialias -s "1" -t int -n
+xfconf-query -c xsettings -p /Xft/DPI -s "96" -t int -n
+xfconf-query -c xsettings -p /Xft/HintStyle -s "hintslight" -t string -n
+xfconf-query -c xsettings -p /Xft/RGBA -s "none" -t string -n
+#xfconf-query -c xsettings -p /Xft/Hinting -s "-1" -n
