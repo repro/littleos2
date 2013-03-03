@@ -1,0 +1,5 @@
+[Added Associations]
+audio/x-wav=aucat.desktop;
+
+[Default Applications]
+audio/x-wav=aucat.desktop

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=zmpc
+Comment=
+Exec=xterm -title zmpc zmpc
+Icon=
+Path=
+Terminal=false
+StartupNotify=false
+Categories=Audio
