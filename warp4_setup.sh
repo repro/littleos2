@@ -103,6 +103,12 @@ xfconf-query -c xfwm4 -p /general/focus_hint -s "true" -t bool -n
 xfconf-query -c xfwm4 -p /general/activate_action -s "bring" -t string -n
 xfconf-query -c xfwm4 -p /general/tile_on_move -s "false" -t bool -n
 xfconf-query -c xfwm4 -p /general/use_compositing -s "false" -t bool -n
+xfconf-query -c xfwm4 -p /general/workspace_count -t int -s 1 -n
+xfconf-query -c xfwm4 -p /general/workspace_names -t string -s "Workspace 1" -a -n
+xfconf-query -c xfwm4 -p /general/margin_top -t int -s "0" -n
+xfconf-query -c xfwm4 -p /general/margin_left -t int -s "0" -n
+xfconf-query -c xfwm4 -p /general/margin_right -t int -s "0" -n
+xfconf-query -c xfwm4 -p /general/margin_bottom -t int -s "0" -n
 xfconf-query -c xsettings -p /Gtk/ButtonImages -s "false" -t bool -n
 xfconf-query -c xsettings -p /Gtk/CanChangeAccels -s "false" -t bool -n
 xfconf-query -c xsettings -p /Gtk/CursorThemeName -s "Warp4" -t string -n
