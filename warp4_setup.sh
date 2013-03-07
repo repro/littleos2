@@ -111,7 +111,7 @@ xfconf-query -c xfwm4 -p /general/margin_right -t int -s "0" -n
 xfconf-query -c xfwm4 -p /general/margin_bottom -t int -s "0" -n
 xfconf-query -c xsettings -p /Gtk/ButtonImages -s "false" -t bool -n
 xfconf-query -c xsettings -p /Gtk/CanChangeAccels -s "false" -t bool -n
-xfconf-query -c xsettings -p /Gtk/CursorThemeName -s "Warp4LeftHanded" -t string -n
+xfconf-query -c xsettings -p /Gtk/CursorThemeName -s "Warp4LH" -t string -n
 xfconf-query -c xsettings -p /Gtk/FontName -s "Workplace Sans 11" -t string -n
 xfconf-query -c xsettings -p /Gtk/MenuImages -s "false" -t bool -n
 xfconf-query -c xsettings -p /Gtk/ToolbarStyle -s "icons" -t string -n
