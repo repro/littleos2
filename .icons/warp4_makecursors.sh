@@ -39,7 +39,7 @@ if command -v xcursorgen >/dev/null; then
     echo "25 12 11 WAIT.png"     | xcursorgen -p src > Warp4LH/cursors/watch
     echo "15  3  6 TEXT.png"     | xcursorgen -p src > Warp4LH/cursors/xterm
   else
-    echo "Failed to create 'Warp4/cursors' directory"
+    echo "Failed to create 'Warp4LH/cursors' directory"
   fi
 else
   echo "Failed to find xcursorgen"
