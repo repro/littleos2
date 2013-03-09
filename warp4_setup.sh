@@ -1,3 +1,4 @@
+pkill xfce4-panel
 xfconf-query -c pointers -p /devwsmouse/RightHanded -s "false" -t bool -n
 xfconf-query -c xfce4-desktop -p /backdrop -r -R
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/backdrop-cycle-enable -s "false" -t bool -n

@@ -5,12 +5,15 @@ style "default"
 {
 	xthickness = 2
 	ythickness = 2
+	GtkMenu::horizontal-padding = 0
+#	GtkMenuBar::horizontal-padding = 30
 	GtkButton::default_border                    = {0, 0, 0, 0}
 	GtkButton::default_outside_border            = {0, 0, 0, 0}
 	GtkButton::child_displacement_x              = 0
 	GtkRange::stepper_spacing                    = 0
     GtkRange::trough_border                      = 0
 	GtkScrolledWindow::scrollbar-spacing = 1
+	GtkMenuBar::internal-padding = 0
 	fg[ACTIVE] = @black
 	bg[ACTIVE] = @gray_light
 	bg[NORMAL] = @gray_light
@@ -41,15 +44,15 @@ widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
 
 style "menubar"
 {
-	bg[PRELIGHT] = @red
-	fg[ACTIVE] = @red
-	fg[SELECTED] = @red
+#	bg[PRELIGHT] = @red
+#	fg[ACTIVE] = @red
+#	fg[SELECTED] = @red
 	GtkMenuBar::internal-padding = 3
 	xthickness = 0
 	ythickness = 0
 	font_name = "bold"
-	GtkMenu::horizontal-padding = 20
-	GtkMenu::vertical-padding = 20
+#	GtkMenu::horizontal-padding = 20
+#	GtkMenu::vertical-padding = 20
 #	font_name = "workplace sans bold 11"
 
     engine "pixmap"
@@ -73,7 +76,7 @@ style "menubar"
 }
 widget_class "*MenuBar*" style "menubar"
 
-style "menu"
+style "menuitem"
 {
 #	bg[PRELIGHT] = @blue_warp
 
@@ -81,7 +84,7 @@ style "menu"
     {
         image
         {
-#			state = ACTIVE
+#			state = NORMAL
             function = BOX
             file = "menubar/menuitem.png"
             border = {3, 3, 3, 3}
@@ -89,12 +92,41 @@ style "menu"
         }
 	}
 }
-#widget_class "*GtkMenu*" style "menu"
 #widget_class "*Menu*" style "menu"
-class "GtkMenuItem*" style "menu"
-class "GtkImageMenuItem*" style "menu"
-class "GtkTearoffMenuItem*" style "menu"
-class "GtkItem*" style "menu"
+class "GtkMenuItem*" style "menuitem"
+#class "GtkImageMenuItem*" style "menu"
+#class "GtkTearoffMenuItem*" style "menu"
+#class "GtkItem*" style "menu"
+
+style "menustyle"
+{
+	font_name = "bold"
+}
+widget_class "*GtkMenu*" style "menustyle"
+widget_class "*menu*" style "menustyle"
+
+style "separator_menu_item" {
+    xthickness = 0
+    ythickness = 2
+
+    GtkSeparatorMenuItem::horizontal-padding = 0
+    GtkWidget::wide-separators = 0
+    GtkWidget::separator-width = 1
+    GtkWidget::separator-height = 17
+
+    engine "pixmap"
+    {
+        image
+        {
+            function = HLINE
+            file = "menubar/line-h.png"
+            border = {0, 0, 0, 0}
+            stretch = TRUE
+        }
+	}
+}
+widget_class "*<GtkSeparatorMenuItem>*" style "separator_menu_item"
+
 
 style "pushbutton"
 {
