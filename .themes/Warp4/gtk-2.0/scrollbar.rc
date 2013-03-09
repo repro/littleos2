@@ -1,0 +1,185 @@
+style "scrollbar" 
+{
+	GtkButton::default_border={0,0,0,0}
+	GtkButton::default_outside_border={0,0,0,0}
+	GtkButton::child_displacement_x=0
+	GtkRange::stepper_spacing=0
+	GtkRange::trough_border=0
+	GtkRange::slider-width=14
+  	GtkRange::stepper-size=20
+   	GtkScrollbar::min_slider_length=19
+	
+	engine "pixmap" 
+	{
+		image 
+		{
+            function = BOX
+            detail = "trough"
+            file = "scrollbar/trough-v.png"
+            border = {0,0,22,22}
+            stretch = TRUE
+            orientation = VERTICAL
+        }
+		image 
+		{
+            function = ARROW
+            state = NORMAL
+            overlay_file = "scrollbar/arrow_up.png"
+            overlay_stretch = FALSE
+            arrow_direction = UP
+        }
+        image
+        {
+            function = ARROW
+            state = PRELIGHT
+            overlay_file = "scrollbar/arrow_up.png"
+            overlay_stretch = FALSE
+            arrow_direction = UP
+        }
+        image
+        {
+            function = ARROW
+            state = INSENSITIVE
+            overlay_file = "scrollbar/arrow_up_insensitive.png"
+            overlay_stretch = FALSE
+            arrow_direction = UP
+        }
+		image
+        {
+            function = ARROW
+            state = ACTIVE
+            overlay_file = "scrollbar/arrow_up_pressed.png"
+            overlay_stretch = FALSE
+            arrow_direction = UP
+        }
+        image
+        {
+            function = ARROW
+            state = NORMAL
+            overlay_file = "scrollbar/arrow_down.png"
+            overlay_stretch = FALSE
+            arrow_direction = DOWN
+        }
+        image
+        {
+            function = ARROW
+            state = PRELIGHT
+            overlay_file = "scrollbar/arrow_down.png"
+            overlay_stretch = FALSE
+            arrow_direction = DOWN
+        }
+        image
+        {
+            function = ARROW
+            state = ACTIVE
+            overlay_file = "scrollbar/arrow_down_pressed.png"
+            overlay_stretch = FALSE
+            arrow_direction = DOWN
+        }
+        image
+        {
+            function = ARROW
+            state = INSENSITIVE
+            overlay_file = "scrollbar/arrow_down_insensitive.png"
+            overlay_stretch = FALSE
+            arrow_direction = DOWN
+        }
+        image
+        {
+            function = SLIDER
+            file = "scrollbar/scrollbar-v.png"
+            border = {3,3,3,3}
+            stretch = TRUE
+            overlay_file = "scrollbar/thumb-v.png"
+            overlay_stretch = FALSE
+            orientation = VERTICAL
+        }
+        image
+        {
+            function = ARROW
+            state = NORMAL
+            overlay_file = "scrollbar/arrow_left.png"
+            overlay_stretch = FALSE
+            arrow_direction = LEFT
+        }
+        image
+        {
+            function = ARROW
+            state = PRELIGHT
+            overlay_file = "scrollbar/arrow_left.png"
+            overlay_stretch = FALSE
+            arrow_direction = LEFT
+        }
+        image
+        {
+            function = ARROW
+            state = INSENSITIVE
+            overlay_file = "scrollbar/arrow_left_insensitive.png"
+            overlay_stretch = FALSE
+            arrow_direction = LEFT
+        }
+        image
+        {
+            function = ARROW
+            state = ACTIVE
+            overlay_file = "scrollbar/arrow_left_pressed.png"
+            overlay_stretch = FALSE
+            arrow_direction = LEFT
+        }
+        image
+        {
+            function = ARROW
+            state = NORMAL
+            overlay_file = "scrollbar/arrow_right.png"
+            overlay_stretch = FALSE
+            arrow_direction = RIGHT
+        }
+        image
+        {
+            function = ARROW
+            state = PRELIGHT
+            overlay_file = "scrollbar/arrow_right.png"
+            overlay_stretch = FALSE
+            arrow_direction = RIGHT
+        }
+        image
+        {
+            function = ARROW
+            state = INSENSITIVE
+            overlay_file = "scrollbar/arrow_right_insensitive.png"
+            overlay_stretch = FALSE
+            arrow_direction = RIGHT
+        }
+        image
+        {
+            function = ARROW
+            state = ACTIVE
+            overlay_file = "scrollbar/arrow_right_pressed.png"
+            overlay_stretch = FALSE
+            arrow_direction = RIGHT
+        }
+        image
+        {
+            function = SLIDER
+            file = "scrollbar/scrollbar-h.png"
+            border = {2,2,2,2}
+            stretch = TRUE
+            overlay_file = "scrollbar/thumb-h.png"
+            overlay_stretch = FALSE
+            orientation = HORIZONTAL
+        }
+        image
+        {
+            function = BOX
+            detail = "trough"
+            file = "scrollbar/trough-h.png"
+            border = {22,22,0,0}
+            stretch = TRUE
+            orientation = HORIZONTAL
+        }
+    }
+}
+
+#class "GtkScrollbar*" style "scrollbar"
+widget_class "*Scrollbar*" style "scrollbar"
+

@@ -1,10 +1,16 @@
+include "scrollbar.rc"
 gtk_color_scheme = "black:#000000\ngray:#808080\ngray_light:#cccccc\nwhite:#ffffff\nblue_warp:#2b00aa\nred:#ff0000"
 
 style "default"
 {
 	xthickness = 2
 	ythickness = 2
-	GtkScrolledWindow::scrollbar-spacing = 0
+	GtkButton::default_border                    = {0, 0, 0, 0}
+	GtkButton::default_outside_border            = {0, 0, 0, 0}
+	GtkButton::child_displacement_x              = 0
+	GtkRange::stepper_spacing                    = 0
+    GtkRange::trough_border                      = 0
+	GtkScrolledWindow::scrollbar-spacing = 1
 	fg[ACTIVE] = @black
 	bg[ACTIVE] = @gray_light
 	bg[NORMAL] = @gray_light
@@ -32,20 +38,63 @@ style "xfdesktop-icon-view" {
 }
 widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
 
-style "menu"
-{
-	bg[PRELIGHT] = @blue_warp
-}
-widget_class "*GtkMenu*" style "menu"
 
 style "menubar"
 {
+	bg[PRELIGHT] = @red
+	fg[ACTIVE] = @red
+	fg[SELECTED] = @red
+	GtkMenuBar::internal-padding = 3
 	xthickness = 0
-	ythickness = 2
+	ythickness = 0
 	font_name = "bold"
+	GtkMenu::horizontal-padding = 20
+	GtkMenu::vertical-padding = 20
 #	font_name = "workplace sans bold 11"
+
+    engine "pixmap"
+    {
+        image
+        {
+			state = NORMAL
+            function = BOX
+            file = "menubar/menubar.png"
+            border = {3,3,3,3}
+            stretch = TRUE
+        }
+        image
+        {
+            function = BOX
+            file = "menubar/menubar-active.png"
+            border = {3,3,3,3}
+            stretch = TRUE
+        }
+    }
 }
-widget_class "*GtkMenuBar*" style "menubar"
+widget_class "*MenuBar*" style "menubar"
+
+style "menu"
+{
+#	bg[PRELIGHT] = @blue_warp
+
+    engine "pixmap"
+    {
+        image
+        {
+#			state = ACTIVE
+            function = BOX
+            file = "menubar/menuitem.png"
+            border = {3, 3, 3, 3}
+            stretch = TRUE
+        }
+	}
+}
+#widget_class "*GtkMenu*" style "menu"
+#widget_class "*Menu*" style "menu"
+class "GtkMenuItem*" style "menu"
+class "GtkImageMenuItem*" style "menu"
+class "GtkTearoffMenuItem*" style "menu"
+class "GtkItem*" style "menu"
 
 style "pushbutton"
 {
