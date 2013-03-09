@@ -1,4 +1,9 @@
-pkill xfce4-panel
+echo -n "Kill xfce4-panel and xfdesktop? (recommended) [Y/n]: "
+read ANSWER
+if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
+	pkill xfce4-panel xfdesktop
+fi
+
 xfconf-query -c pointers -p /devwsmouse/RightHanded -s "false" -t bool -n
 xfconf-query -c xfce4-desktop -p /backdrop -r -R
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/backdrop-cycle-enable -s "false" -t bool -n
@@ -124,3 +129,33 @@ xfconf-query -c xsettings -p /Xft/DPI -s "96" -t int -n
 xfconf-query -c xsettings -p /Xft/HintStyle -s "hintslight" -t string -n
 xfconf-query -c xsettings -p /Xft/RGBA -s "none" -t string -n
 #xfconf-query -c xsettings -p /Xft/Hinting -s "-1" -n
+
+echo -n "Install .xsession file? [Y/n]: "
+read ANSWER
+if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
+	mv .xsession.warp4 .xsession
+fi
+
+echo -n "Install .xinitrc file? [Y/n]: "
+read ANSWER
+if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
+	mv .xinitrc.warp4 .xinitrc
+fi
+
+echo -n "Install .Xresources file? [Y/n]: "
+read ANSWER
+if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
+	mv .Xresources.warp4 .Xresources
+fi
+
+echo -n "Remove temporary files? [Y/n]: "
+read ANSWER
+if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
+	rm -rf master.zip littleos2-master
+fi
+
+echo -n "Logout? (recommended) [Y/n]: "
+read ANSWER
+if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
+	echo xfce4-session-logout --logout
+fi
