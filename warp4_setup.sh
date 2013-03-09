@@ -6,10 +6,7 @@ fi
 
 echo -n "Perform Xfconf setup? (Overwrites current settings) [Y/n]: "
 read ANSWER
-if [ "$ANSWER" != "y" ] && [ "$ANSWER" != "Y" ] && [ "$ANSWER" != "" ]; then
-	exit 0
-fi
-
+if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
 xfconf-query -c pointers -p /devwsmouse/RightHanded -s "false" -t bool -n
 xfconf-query -c xfce4-desktop -p /backdrop -r -R
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/backdrop-cycle-enable -s "false" -t bool -n
@@ -135,23 +132,36 @@ xfconf-query -c xsettings -p /Xft/DPI -s "96" -t int -n
 xfconf-query -c xsettings -p /Xft/HintStyle -s "hintslight" -t string -n
 xfconf-query -c xsettings -p /Xft/RGBA -s "none" -t string -n
 #xfconf-query -c xsettings -p /Xft/Hinting -s "-1" -n
+fi
 
 echo -n "Install .xsession file? [Y/n]: "
 read ANSWER
 if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
-	cp .xsession /var/tmp/.xsession`date +%Y%m%d` && mv .xsession.warp4 .xsession
+	if [ -f .xsession ]; then
+		cp .xsession /var/tmp/.xsession`date +%Y%m%d` && mv .xsession.warp4 .xsession
+	else
+		mv .xsession.warp4 .xsession
+	fi
 fi
 
 echo -n "Install .xinitrc file? [Y/n]: "
 read ANSWER
 if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
-	cp .xinitrc /var/tmp/.xinitrc`date +%Y%m%d` && mv .xinitrc.warp4 .xinitrc
+	if [ -f .xinitrc ]; then
+		cp .xinitrc /var/tmp/.xinitrc`date +%Y%m%d` && mv .xinitrc.warp4 .xinitrc
+	else
+		mv .xinitrc.warp4 .xinitrc
+	fi
 fi
 
 echo -n "Install .Xresources file? [Y/n]: "
 read ANSWER
 if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
-	cp .Xresources /var/tmp/.Xresources`date +%Y%m%d` && mv .Xresources.warp4 .Xresources
+	if [ -f .Xresources ]; then
+		cp .Xresources /var/tmp/.Xresources`date +%Y%m%d` && mv .Xresources.warp4 .Xresources
+	else
+		mv .Xresources.warp4 .Xresources
+	fi
 fi
 
 echo -n "Remove temporary install files (master.zip, littleos2-master)? [Y/n]: "
