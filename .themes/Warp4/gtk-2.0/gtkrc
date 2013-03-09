@@ -17,14 +17,10 @@ style "default"
 	fg[ACTIVE] = @black
 	bg[ACTIVE] = @gray_light
 	bg[NORMAL] = @gray_light
-#	bg[SELECTED] = @red
-#	bg[INSENSITIVE] = @red
 #	bg[PRELIGHT] = @blue_warp
 	base[ACTIVE] = @gray_light
 	base[NORMAL] = @white
 	base[SELECTED] = @gray
-#	base[INSENSITIVE] = @red
-#	base[PRELIGHT] = @red
 	text[ACTIVE] = @black
 }
 class "GtkWidget" style "default"
@@ -44,9 +40,6 @@ widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
 
 style "menubar"
 {
-#	bg[PRELIGHT] = @red
-#	fg[ACTIVE] = @red
-#	fg[SELECTED] = @red
 	GtkMenuBar::internal-padding = 3
 	xthickness = 0
 	ythickness = 0
@@ -79,6 +72,8 @@ widget_class "*MenuBar*" style "menubar"
 style "menuitem"
 {
 #	bg[PRELIGHT] = @blue_warp
+	xthickness = 0
+	ythickness = 1
 
     engine "pixmap"
     {
@@ -120,7 +115,7 @@ style "separator_menu_item" {
         {
             function = HLINE
             file = "menubar/line-h.png"
-            border = {0, 0, 0, 0}
+            border = {0,0,1,0}
             stretch = TRUE
         }
 	}
