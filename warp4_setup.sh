@@ -11,7 +11,7 @@ if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
     if [ -f .xsession ]; then
         cp .xsession /var/tmp/.xsession`date +%Y%m%d` && cp littleos2-master/xsession .xsession
     else
-        cp littleos2-master/xsession.warp4 .xsession
+        cp littleos2-master/xsession .xsession
     fi
 fi
 
@@ -21,7 +21,7 @@ if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
     if [ -f .xinitrc ]; then
         cp .xinitrc /var/tmp/.xinitrc`date +%Y%m%d` && cp littleos2-master/xinitrc .xinitrc
     else
-        cp littleos2-master/xinitrc.warp4 .xinitrc
+        cp littleos2-master/xinitrc .xinitrc
     fi
 fi
 
