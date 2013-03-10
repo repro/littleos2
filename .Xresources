@@ -1,4 +1,3 @@
-! To include this file add '#include ".Xresources.warp4"' to the .Xresources file
 Xcursor.theme: Warp4LH
 XTerm*loginShell:true
 XTerm*font:-schumacher-clean-medium-r-normal--12-120-75-75-c-60-iso10646-1

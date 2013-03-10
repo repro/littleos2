@@ -9,9 +9,9 @@ echo -n "Install .xsession file? [Y/n]: "
 read ANSWER
 if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
     if [ -f .xsession ]; then
-        cp .xsession /var/tmp/.xsession`date +%Y%m%d` && cp littleos2-master/.xsession.warp4 .xsession
+        cp .xsession /var/tmp/.xsession`date +%Y%m%d` && cp littleos2-master/xsession .xsession
     else
-        cp littleos2-master/.xsession.warp4 .xsession
+        cp littleos2-master/xsession.warp4 .xsession
     fi
 fi
 
@@ -19,20 +19,16 @@ echo -n "Install .xinitrc file? [Y/n]: "
 read ANSWER
 if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
     if [ -f .xinitrc ]; then
-        cp .xinitrc /var/tmp/.xinitrc`date +%Y%m%d` && cp littleos2-master/.xinitrc.warp4 .xinitrc
+        cp .xinitrc /var/tmp/.xinitrc`date +%Y%m%d` && cp littleos2-master/xinitrc .xinitrc
     else
-        cp littleos2-master/.xinitrc.warp4 .xinitrc
+        cp littleos2-master/xinitrc.warp4 .xinitrc
     fi
 fi
 
-echo -n "Install .Xresources file? [Y/n]: "
+echo -n "Install the 'dot' files? (overwrites existing files) [Y/n]: "
 read ANSWER
 if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
-    if [ -f .Xresources ]; then
-        cp .Xresources /var/tmp/.Xresources`date +%Y%m%d` && cp littleos2-master/.Xresources.warp4 .Xresources
-    else
-        cp littleos2-master/.Xresources.warp4 .Xresources
-    fi
+	cp -r littleos2-master/.* .
 fi
 
 echo -n "Perform Xfconf setup? (Overwrites existing settings) [Y/n]: "
