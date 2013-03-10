@@ -1,5 +1,5 @@
 include "scrollbar.rc"
-gtk_color_scheme = "black:#000000\ngray:#808080\ngray_light:#cccccc\nwhite:#ffffff\nblue_warp:#2b00aa\nred:#ff0000"
+gtk_color_scheme = "black:#000000\ngray:#808080\ngray_light:#cccccc\nwhite:#ffffff\nblue_warp:#2b00aa\nyellow:#ffff00\nred:#ff0000"
 
 style "default"
 {
@@ -14,14 +14,34 @@ style "default"
     GtkRange::trough_border                      = 0
 	GtkScrolledWindow::scrollbar-spacing = 1
 	GtkMenuBar::internal-padding = 0
-	fg[ACTIVE] = @black
-	bg[ACTIVE] = @gray_light
-	bg[NORMAL] = @gray_light
-#	bg[PRELIGHT] = @blue_warp
-	base[ACTIVE] = @gray_light
-	base[NORMAL] = @white
-	base[SELECTED] = @gray
-	text[ACTIVE] = @black
+
+    fg[NORMAL] = @black
+    fg[ACTIVE] = @black
+    fg[SELECTED] = @white
+    fg[PRELIGHT] = @black
+    fg[INSENSITIVE] = @gray
+
+    bg[NORMAL] = @gray_light
+    bg[ACTIVE] = @gray_light
+#    bg[SELECTED] = @blue_warp
+    bg[SELECTED] = @gray
+    bg[PRELIGHT] = @gray_light
+    bg[INSENSITIVE] = @gray_light
+
+    base[NORMAL] = @white
+    base[ACTIVE] = @gray_light
+    base[SELECTED] = @gray
+    base[PRELIGHT] = @red
+    base[INSENSITIVE] = @red
+
+    text[NORMAL] = @black
+    text[ACTIVE] = @black
+    text[SELECTED] = @white
+    text[PRELIGHT] = @white
+    text[INSENSITIVE] = @red
+
+	engine "mist" {
+    }
 }
 class "GtkWidget" style "default"
 
@@ -40,6 +60,7 @@ widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
 
 style "menubar"
 {
+    fg[PRELIGHT] = @white
 	GtkMenuBar::internal-padding = 3
 	xthickness = 0
 	ythickness = 0
@@ -71,6 +92,7 @@ widget_class "*MenuBar*" style "menubar"
 
 style "menuitem"
 {
+    fg[PRELIGHT] = @white
 #	bg[PRELIGHT] = @blue_warp
 	xthickness = 0
 	ythickness = 1
@@ -95,6 +117,7 @@ class "GtkMenuItem*" style "menuitem"
 
 style "menustyle"
 {
+    fg[PRELIGHT] = @white
 	font_name = "bold"
 }
 widget_class "*GtkMenu*" style "menustyle"
@@ -131,8 +154,8 @@ widget_class "*Button*" style "pushbutton"
 
 style "tooltip"
 {
-	bg[NORMAL] = "#ffff00"
-	fg[NORMAL] = "#000000"
+	bg[NORMAL] = @yellow
+	fg[NORMAL] = @black
 }
 widget "*tooltip*" style "tooltip"
 
