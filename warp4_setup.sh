@@ -1,3 +1,10 @@
+echo -n "Kill xfce4-panel and xfdesktop? (recommended) [Y/n]: "
+read ANSWER
+if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
+	pkill xfce4-panel
+	pkill xfdesktop
+fi
+
 echo -n "Install .xsession file? [Y/n]: "
 read ANSWER
 if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
@@ -26,13 +33,6 @@ if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
     else
         cp littleos2-master/.Xresources.warp4 .Xresources
     fi
-fi
-
-echo -n "Kill xfce4-panel and xfdesktop? (recommended) [Y/n]: "
-read ANSWER
-if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
-	pkill xfce4-panel
-	pkill xfdesktop
 fi
 
 echo -n "Perform Xfconf setup? (Overwrites existing settings) [Y/n]: "
