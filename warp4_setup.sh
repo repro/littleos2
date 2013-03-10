@@ -1,3 +1,33 @@
+echo -n "Install .xsession file? [Y/n]: "
+read ANSWER
+if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
+    if [ -f .xsession ]; then
+        cp .xsession /var/tmp/.xsession`date +%Y%m%d` && cp littleos2-master/.xsession.warp4 .xsession
+    else
+        cp littleos2-master/.xsession.warp4 .xsession
+    fi
+fi
+
+echo -n "Install .xinitrc file? [Y/n]: "
+read ANSWER
+if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
+    if [ -f .xinitrc ]; then
+        cp .xinitrc /var/tmp/.xinitrc`date +%Y%m%d` && cp littleos2-master/.xinitrc.warp4 .xinitrc
+    else
+        cp littleos2-master/.xinitrc.warp4 .xinitrc
+    fi
+fi
+
+echo -n "Install .Xresources file? [Y/n]: "
+read ANSWER
+if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
+    if [ -f .Xresources ]; then
+        cp .Xresources /var/tmp/.Xresources`date +%Y%m%d` && cp littleos2-master/.Xresources.warp4 .Xresources
+    else
+        cp littleos2-master/.Xresources.warp4 .Xresources
+    fi
+fi
+
 echo -n "Kill xfce4-panel and xfdesktop? (recommended) [Y/n]: "
 read ANSWER
 if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
@@ -5,7 +35,7 @@ if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
 	pkill xfdesktop
 fi
 
-echo -n "Perform Xfconf setup? (Overwrites current settings) [Y/n]: "
+echo -n "Perform Xfconf setup? (Overwrites existing settings) [Y/n]: "
 read ANSWER
 if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
 xfconf-query -c pointers -p /devwsmouse/RightHanded -s "false" -t bool -n
@@ -133,36 +163,6 @@ xfconf-query -c xsettings -p /Xft/DPI -s "96" -t int -n
 xfconf-query -c xsettings -p /Xft/HintStyle -s "hintslight" -t string -n
 xfconf-query -c xsettings -p /Xft/RGBA -s "none" -t string -n
 #xfconf-query -c xsettings -p /Xft/Hinting -s "-1" -n
-fi
-
-echo -n "Install .xsession file? [Y/n]: "
-read ANSWER
-if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
-	if [ -f .xsession ]; then
-		cp .xsession /var/tmp/.xsession`date +%Y%m%d` && mv .xsession.warp4 .xsession
-	else
-		mv .xsession.warp4 .xsession
-	fi
-fi
-
-echo -n "Install .xinitrc file? [Y/n]: "
-read ANSWER
-if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
-	if [ -f .xinitrc ]; then
-		cp .xinitrc /var/tmp/.xinitrc`date +%Y%m%d` && mv .xinitrc.warp4 .xinitrc
-	else
-		mv .xinitrc.warp4 .xinitrc
-	fi
-fi
-
-echo -n "Install .Xresources file? [Y/n]: "
-read ANSWER
-if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
-	if [ -f .Xresources ]; then
-		cp .Xresources /var/tmp/.Xresources`date +%Y%m%d` && mv .Xresources.warp4 .Xresources
-	else
-		mv .Xresources.warp4 .Xresources
-	fi
 fi
 
 echo -n "Remove temporary install files (master.zip, littleos2-master)? [Y/n]: "
