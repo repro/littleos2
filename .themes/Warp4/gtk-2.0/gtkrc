@@ -31,14 +31,14 @@ style "default"
     base[NORMAL] = @white
     base[ACTIVE] = @gray_light
     base[SELECTED] = @gray
-    base[PRELIGHT] = @red
-    base[INSENSITIVE] = @red
+#    base[PRELIGHT] = @red
+#    base[INSENSITIVE] = @red
 
     text[NORMAL] = @black
     text[ACTIVE] = @black
     text[SELECTED] = @white
     text[PRELIGHT] = @white
-    text[INSENSITIVE] = @red
+#    text[INSENSITIVE] = @red
 
 	engine "mist" {
     }
