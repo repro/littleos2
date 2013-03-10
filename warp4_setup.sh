@@ -1,7 +1,8 @@
 echo -n "Kill xfce4-panel and xfdesktop? (recommended) [Y/n]: "
 read ANSWER
 if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
-	pkill xfce4-panel xfdesktop
+	pkill xfce4-panel
+	pkill xfdesktop
 fi
 
 echo -n "Perform Xfconf setup? (Overwrites current settings) [Y/n]: "
