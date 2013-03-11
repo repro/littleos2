@@ -85,11 +85,32 @@ style "separator_menu_item" {
 	}
 }
 
+style "check_menu_item" {
+	engine "pixmap" {
+        image
+        {
+            function = OPTION
+            shadow = IN
+            overlay_file = "menu/check.png"
+            overlay_stretch = FALSE
+        }
+        image
+        {
+            function = CHECK
+            shadow = IN
+            overlay_file = "menu/check.png"
+            overlay_stretch = FALSE
+        }
+	}
+}
+
+
 widget_class "*MenuBar*" style "menubar"
 widget_class "*<GtkSeparatorMenuItem>*" style "separator_menu_item"
 class "GtkMenuItem*" style "menuitem"
 widget_class "*GtkMenu*" style "menu"
 widget_class "*menu*" style "menu"
+class "GtkCheckMenuItem*" style "check_menu_item"
 
 #widget_class "*Menu*" style "menu"
 #class "GtkImageMenuItem*" style "menu"
