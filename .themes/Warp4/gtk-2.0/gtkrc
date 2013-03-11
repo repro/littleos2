@@ -1,6 +1,3 @@
-include "menu.rc"
-include "scrollbar.rc"
-
 gtk_color_scheme = "black:#000000\ngray:#808080\ngray_light:#cccccc\nwhite:#ffffff\nblue_warp:#2b00aa\nyellow:#ffff00\nred:#ff0000"
 
 style "default"
@@ -43,11 +40,6 @@ style "default"
     text[SELECTED] = @white
     text[PRELIGHT] = @white
 #    text[INSENSITIVE] = @red
-
-#	engine "xfce" {
-#		smooth_edge = false
-#		text-shadow = 0
-#    }
 }
 class "GtkWidget" style "default"
 
@@ -77,3 +69,6 @@ style "tooltip"
 widget "*tooltip*" style "tooltip"
 
 #bg_pixmap[NORMAL] = "BIGBLU.png"
+
+include "scrollbar.rc"
+include "menu.rc"
