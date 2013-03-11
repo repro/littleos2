@@ -161,6 +161,9 @@ xfconf-query -c xsettings -p /Xft/RGBA -s "none" -t string -n
 #xfconf-query -c xsettings -p /Xft/Hinting -s "-1" -n
 fi
 
+xfce4-panel --restart
+xfdesktop --reload
+
 echo -n "Remove temporary install files (master.zip, littleos2-master)? [Y/n]: "
 read ANSWER
 if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then

@@ -1,4 +1,6 @@
+include "menu.rc"
 include "scrollbar.rc"
+
 gtk_color_scheme = "black:#000000\ngray:#808080\ngray_light:#cccccc\nwhite:#ffffff\nblue_warp:#2b00aa\nyellow:#ffff00\nred:#ff0000"
 
 style "default"
@@ -14,6 +16,8 @@ style "default"
     GtkRange::trough_border                      = 0
 	GtkScrolledWindow::scrollbar-spacing = 1
 	GtkMenuBar::internal-padding = 0
+	GtkMenuBar::shadow-type = none
+	GtkMenuItem::selected-shadow-type = out
 
     fg[NORMAL] = @black
     fg[ACTIVE] = @black
@@ -40,8 +44,10 @@ style "default"
     text[PRELIGHT] = @white
 #    text[INSENSITIVE] = @red
 
-	engine "mist" {
-    }
+#	engine "xfce" {
+#		smooth_edge = false
+#		text-shadow = 0
+#    }
 }
 class "GtkWidget" style "default"
 
@@ -56,95 +62,6 @@ style "xfdesktop-icon-view" {
 	XfdesktopIconView::cell-text-width-proportion = 2.5
 }
 widget_class "*XfdesktopIconView*" style "xfdesktop-icon-view"
-
-
-style "menubar"
-{
-    fg[PRELIGHT] = @white
-	GtkMenuBar::internal-padding = 3
-	xthickness = 0
-	ythickness = 0
-	font_name = "bold"
-#	GtkMenu::horizontal-padding = 20
-#	GtkMenu::vertical-padding = 20
-#	font_name = "workplace sans bold 11"
-
-    engine "pixmap"
-    {
-        image
-        {
-			state = NORMAL
-            function = BOX
-            file = "menubar/menubar.png"
-            border = {3,3,3,3}
-            stretch = TRUE
-        }
-        image
-        {
-            function = BOX
-            file = "menubar/menubar-active.png"
-            border = {3,3,3,3}
-            stretch = TRUE
-        }
-    }
-}
-widget_class "*MenuBar*" style "menubar"
-
-style "menuitem"
-{
-    fg[PRELIGHT] = @white
-#	bg[PRELIGHT] = @blue_warp
-	xthickness = 0
-	ythickness = 1
-
-    engine "pixmap"
-    {
-        image
-        {
-#			state = NORMAL
-            function = BOX
-            file = "menubar/menuitem.png"
-            border = {3, 3, 3, 3}
-            stretch = TRUE
-        }
-	}
-}
-#widget_class "*Menu*" style "menu"
-class "GtkMenuItem*" style "menuitem"
-#class "GtkImageMenuItem*" style "menu"
-#class "GtkTearoffMenuItem*" style "menu"
-#class "GtkItem*" style "menu"
-
-style "menustyle"
-{
-    fg[PRELIGHT] = @white
-	font_name = "bold"
-}
-widget_class "*GtkMenu*" style "menustyle"
-widget_class "*menu*" style "menustyle"
-
-style "separator_menu_item" {
-    xthickness = 0
-    ythickness = 2
-
-    GtkSeparatorMenuItem::horizontal-padding = 0
-    GtkWidget::wide-separators = 0
-    GtkWidget::separator-width = 1
-    GtkWidget::separator-height = 17
-
-    engine "pixmap"
-    {
-        image
-        {
-            function = HLINE
-            file = "menubar/line-h.png"
-            border = {0,0,1,0}
-            stretch = TRUE
-        }
-	}
-}
-widget_class "*<GtkSeparatorMenuItem>*" style "separator_menu_item"
-
 
 style "pushbutton"
 {

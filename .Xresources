@@ -1,5 +1,6 @@
 Xcursor.theme: Warp4LH
 XTerm*loginShell:true
+!XTerm*faceName:xft:Workspace Sans:pixelsize=11
 XTerm*font:-schumacher-clean-medium-r-normal--12-120-75-75-c-60-iso10646-1
 XTerm*boldFont:-schumacher-clean-medium-r-normal--12-120-75-75-c-60-iso10646-1
 XTerm.vt100.geometry:80x26
@@ -24,5 +25,5 @@ XTerm*color12:rgb:00/00/ff
 XTerm*color13:rgb:ff/00/ff
 XTerm*color14:rgb:00/ff/ff
 XTerm*color15:rgb:ff/ff/ff
-!XTerm*colorBDMode:true
-!XTerm*colorBD:rgb:ff/ff/ff
+XTerm*colorBDMode:true
+XTerm*colorBD:rgb:ff/ff/ff
