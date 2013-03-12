@@ -72,3 +72,5 @@ widget "*tooltip*" style "tooltip"
 
 include "scrollbar.rc"
 include "menu.rc"
+include "checkbox.rc"
+#include "button.rc"
