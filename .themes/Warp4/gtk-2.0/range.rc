@@ -1,0 +1,27 @@
+style "range"
+{
+    GtkRange::slider_width = 20
+#	GtkRange::trough-under-steppers = FALSE
+
+	engine "pixmap"
+	{
+		image
+		{
+            function = SLIDER
+            overlay_file = "range/slider-h.png"
+            overlay_stretch = FALSE
+            orientation = HORIZONTAL
+		}
+        image
+        {
+            function = BOX
+            detail = "trough"
+            file = "range/trough-h.png"
+            border = {3, 2, 3, 2}
+            stretch = TRUE
+            orientation = HORIZONTAL
+        }
+	}
+}
+class "GtkRange*" style "range"
+
