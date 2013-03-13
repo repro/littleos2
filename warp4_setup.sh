@@ -26,10 +26,10 @@ if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ]; then
     fi
 fi
 
-echo -n "Install the 'dot' files? (overwrites existing files) [Y/n]: "
+echo -n "Install the 'dot' files? (existing files will be overwritten) [Y/n]: "
 read ANSWER
 if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
-	cp -r littleos2-master/.* .
+	cp -r littleos2-master/.??* .
 fi
 
 echo -n "Perform Xfconf setup? (Overwrites existing settings) [Y/n]: "
