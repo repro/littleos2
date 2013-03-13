@@ -1,13 +1,13 @@
-echo -n "Kill xfce4-panel and xfdesktop? (recommended) [Y/n]: "
-read ANSWER
-if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
-	pkill xfce4-panel
-	pkill xfdesktop
-fi
+#echo -n "Kill xfce4-panel and xfdesktop? (recommended) [Y/n]: "
+#read ANSWER
+#if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
+#	pkill xfce4-panel
+#	pkill xfdesktop
+#fi
 
-echo -n "Install .xsession file? [Y/n]: "
+echo -n "Install .xsession file? [y/N]: "
 read ANSWER
-if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
+if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ]; then
     if [ -f .xsession ]; then
         cp .xsession /var/tmp/.xsession`date +%Y%m%d` && cp littleos2-master/xsession .xsession
     else
@@ -15,9 +15,9 @@ if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
     fi
 fi
 
-echo -n "Install .xinitrc file? [Y/n]: "
+echo -n "Install .xinitrc file? [y/N]: "
 read ANSWER
-if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
+if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ]; then
     if [ -f .xinitrc ]; then
         cp .xinitrc /var/tmp/.xinitrc`date +%Y%m%d` && cp littleos2-master/xinitrc .xinitrc
     else
@@ -170,8 +170,8 @@ if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
 	rm -rf master.zip littleos2-master
 fi
 
-echo -n "Logout? (recommended) [Y/n]: "
+echo -n "Logout? [y/N]: "
 read ANSWER
-if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
+if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ]; then
 	xfce4-session-logout --logout
 fi
