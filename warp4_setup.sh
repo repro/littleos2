@@ -1,3 +1,4 @@
+
 #echo -n "Kill xfce4-panel and xfdesktop? (recommended) [Y/n]: "
 #read ANSWER
 #if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
