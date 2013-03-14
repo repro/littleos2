@@ -1,10 +1,9 @@
-
-#echo -n "Kill xfce4-panel and xfdesktop? (recommended) [Y/n]: "
-#read ANSWER
-#if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
-#	pkill xfce4-panel
-#	pkill xfdesktop
-#fi
+echo -n "Kill xfce4-panel and xfdesktop? [y/N]: "
+read ANSWER
+if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ]; then
+	pkill xfce4-panel
+	pkill xfdesktop
+fi
 
 echo -n "Install .xsession file? [y/N]: "
 read ANSWER
