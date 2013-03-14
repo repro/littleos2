@@ -5,21 +5,61 @@ style "range"
 
 	engine "pixmap"
 	{
+        image
+        {
+            state = ACTIVE
+            function = BOX
+            detail = "trough"
+            file = "range/trough-h.png"
+#            file = "range/trough-h-black.png"
+            border = {3, 3, 3, 2}
+            stretch = TRUE
+            orientation = HORIZONTAL
+        }
 		image
 		{
+			state = NORMAL
             function = SLIDER
             overlay_file = "range/slider-h.png"
+#            overlay_file = "range/slider-h-black.png"
             overlay_stretch = FALSE
             orientation = HORIZONTAL
 		}
         image
         {
+            state = PRELIGHT
+            function = SLIDER
+#            overlay_file = "range/slider-h-black.png"
+            overlay_file = "range/slider-h.png"
+            overlay_stretch = FALSE
+            orientation = HORIZONTAL
+        }
+
+        image
+        {
+            state = ACTIVE
             function = BOX
             detail = "trough"
-            file = "range/trough-h.png"
-            border = {3, 2, 3, 2}
+            file = "range/trough-v.png"
+            border = {3, 2, 3, 3}
             stretch = TRUE
-            orientation = HORIZONTAL
+            orientation = VERTICAL
+        }
+		image
+		{
+			state = NORMAL
+            function = SLIDER
+            overlay_file = "range/slider-v.png"
+            overlay_stretch = FALSE
+            orientation = VERTICAL
+		}
+        image
+        {
+            state = PRELIGHT
+            function = SLIDER
+            overlay_file = "range/slider-v.png"
+            overlay_stretch = FALSE
+            orientation = VERTICAL
         }
 	}
 }

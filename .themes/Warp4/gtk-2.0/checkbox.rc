@@ -1,5 +1,8 @@
-style "check_box"
+style "checkbox"
 {
+	GtkCheckButton::indicator_size = 16
+	GtkCheckButton::indicator_spacing = 0
+
 	engine "pixmap" 
 	{
 		image 
@@ -17,25 +20,34 @@ style "check_box"
 			overlay_file = "checkbox/checkbox-pressed.png"
 			overlay_stretch = FALSE
 		}
-		
-		image 
-		{
-			function = OPTION
-			shadow = OUT
-			overlay_file = "checkbox/option.png"
-			overlay_stretch = FALSE
-		}
-
-		image 
-		{
-			function = OPTION
-			shadow = IN
-			overlay_file = "checkbox/option-pressed.png"
-			overlay_stretch = FALSE
-		}
 	}
 }
 
-class "GtkCheckButton*" style "check_box"
-#class "GtkTreeView*" style "check_box"
+style "radiobutton"
+{
+    GtkCheckButton::indicator_size = 19
+    GtkCheckButton::indicator_spacing = 0
+
+	engine "pixmap" 
+	{
+        image
+        {
+            function = OPTION
+            shadow = OUT
+            overlay_file = "checkbox/option.png"
+            overlay_stretch = FALSE
+        }
+
+        image
+        {
+            function = OPTION
+            shadow = IN
+            overlay_file = "checkbox/option-pressed.png"
+            overlay_stretch = FALSE
+        }
+	}
+}
+
+class "GtkCheckButton*" style "checkbox"
+class "GtkRadioButton*" style "radiobutton"
 

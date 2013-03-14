@@ -3,10 +3,10 @@ style "scrollbar"
 	GtkButton::default_border={0,0,0,0}
 	GtkButton::default_outside_border={0,0,0,0}
 	GtkButton::child_displacement_x=0
+  	GtkRange::stepper-size=20
 	GtkRange::stepper_spacing=0
 	GtkRange::trough_border=0
 	GtkRange::slider-width=16
-  	GtkRange::stepper-size=20
    	GtkScrollbar::min_slider_length=19
 	
 	engine "pixmap" 
