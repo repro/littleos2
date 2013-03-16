@@ -1,8 +1,8 @@
-echo -n "Kill xfce4-panel and xfdesktop? [y/N]: "
+echo -n "Quit xfce4-panel and xfdesktop? [y/N]: "
 read ANSWER
 if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ]; then
-	pkill xfce4-panel
-	pkill xfdesktop
+	xfce4-panel --quit
+	xfdesktop --quit
 fi
 
 echo -n "Install .xsession file? [y/N]: "
@@ -31,7 +31,7 @@ if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
 	cp -r littleos2-master/.??* .
 fi
 
-echo -n "Perform Xfconf setup? (Overwrites existing settings) [Y/n]: "
+echo -n "Perform Xfconf setup? (Overwrites existing configuration) [Y/n]: "
 read ANSWER
 if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
 xfconf-query -c pointers -p /devwsmouse/RightHanded -s "false" -t bool -n
