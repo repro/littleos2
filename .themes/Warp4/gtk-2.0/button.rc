@@ -49,19 +49,12 @@ style "button"
 }
 
 style "combo" {
+	GtkWidget::interior_focus = 1
 	GtkComboBox::appears_as_list = 1
 	engine "pixmap" {
-		image 
-		{
-			function = FOCUS
-			detail = "button"
-			file = "button/button-focus.png"
-			border = {0,0,0,0}
-			stretch = FALSE
-		}
 	}
 }
 
 class "GtkButton*" style "button"
-class "GtkComboBox" style "combo"
+class "GtkComboBox*" style "combo"
 

@@ -2,6 +2,7 @@ style "checkbox"
 {
 	GtkCheckButton::indicator_size = 16
 	GtkCheckButton::indicator_spacing = 0
+	GtkWidget::interior_focus = 1
 
 	engine "pixmap" 
 	{

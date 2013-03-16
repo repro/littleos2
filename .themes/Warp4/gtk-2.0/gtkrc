@@ -15,6 +15,7 @@ style "default"
 	GtkMenuBar::internal-padding = 0
 	GtkMenuBar::shadow-type = none
 	GtkMenuItem::selected-shadow-type = out
+	GtkWidget::interior_focus = 1
 
     fg[NORMAL] = @black
     fg[ACTIVE] = @black
