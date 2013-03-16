@@ -1,0 +1,60 @@
+style "progress"
+{
+    xthickness = 1
+    ythickness = 1
+	GtkProgressBar::xspacing = 7
+	GtkProgressBar::yspacing = 7
+	GtkProgressBar::min_horizontal_bar_height = 20
+	GtkProgressBar::min_horizontal_bar_width = 150
+	GtkProgressBar::min_vertical_bar_height = 80
+	GtkProgressBar::min_vertical_bar_width = 22
+
+	GtkProgressBar ::shadow_type = GTK_SHADOW_NONE
+	
+	engine "pixmap"
+	{
+		image
+		{
+			function = BOX
+			detail = "trough"
+			file = "progress/trough.png"
+			border = {1,1,2,2}
+			stretch	= TRUE
+			orientation	= HORIZONTAL
+			recolorable = TRUE
+		}
+		image
+		{
+			function = BOX
+			detail = "bar"
+			file = "progress/progress-h.png"
+			border = {0,0,2,2}
+			stretch	= FALSE
+			orientation	= HORIZONTAL
+			recolorable = TRUE
+		}
+        image
+        {
+            function = BOX
+            detail = "trough"
+            file = "progress/trough-v.png"
+            border = {3,3,1,1}
+            stretch = TRUE
+            orientation = VERTICAL
+            recolorable = TRUE
+        }
+        image
+        {
+            function = BOX
+            detail = "bar"
+            file = "progress/progress-v.png"
+            border = {3,3,0,0}
+            stretch = FALSE
+            orientation = VERTICAL
+            recolorable = TRUE
+        }
+	}
+}
+
+class "GtkProgressBar" style "progress"
+

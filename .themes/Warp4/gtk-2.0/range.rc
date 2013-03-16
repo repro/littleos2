@@ -7,6 +7,8 @@ style "range" {
     GtkRange::stepper_spacing = 0
 	GtkRange::trough_border = 0
 	GtkRange::trough_under_steppers = 1
+	GtkScale::slider_length = 14
+#	GtkScale::value_spacing = 20
 
 	GtkWidget::interior_focus = 0
 	GtkWidget::focus_padding = 0
@@ -195,4 +197,5 @@ style "range" {
 	}
 }
 class "GtkRange*" style "range"
+#class "GtkSlider*" style "range"
 

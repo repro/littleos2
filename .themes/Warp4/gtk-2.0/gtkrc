@@ -16,6 +16,7 @@ style "default"
 	GtkMenuBar::shadow-type = none
 	GtkMenuItem::selected-shadow-type = out
 	GtkWidget::interior_focus = 1
+	GtkComboBox::appears_as_list = 0
 
     fg[NORMAL] = @black
     fg[ACTIVE] = @black
@@ -75,8 +76,9 @@ include "scrollbar.rc"
 include "menu.rc"
 include "checkbox.rc"
 include "range.rc"
-#include "spin.rc"
 include "button.rc"
+include "progress.rc"
+#include "spin.rc"
 
 #class "GtkComboBox*" style "default"
 #class "GtkCombo*" style "default"

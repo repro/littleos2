@@ -1,5 +1,6 @@
 [Added Associations]
 audio/x-wav=aucat.desktop;
+application/postscript=lpr.desktop;
 
 [Default Applications]
 audio/x-wav=aucat.desktop

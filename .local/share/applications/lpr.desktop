@@ -1,0 +1,13 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+NoDisplay=true
+Type=Application
+Name=lpr
+Comment=
+Exec=lpr
+Icon=
+Path=
+Terminal=false
+StartupNotify=false
+Categories=

@@ -180,6 +180,6 @@ style "scrollbar"
     }
 }
 
-#class "GtkScrollbar*" style "scrollbar"
-widget_class "*Scrollbar*" style "scrollbar"
+class "GtkScrollbar" style "scrollbar"
+#widget_class "*Scrollbar*" style "scrollbar"
 

@@ -37,24 +37,38 @@ style "button"
 			border = {4, 4, 4, 4}
 			stretch = TRUE
 		}
-		image 
-		{
+		image {
 			function = FOCUS
 			detail = "button"
 			file = "button/button-focus.png"
 			border = {4, 4, 4, 4}
 			stretch = TRUE
 		}
+#		image {
+#			function = FOCUS
+#			state = ACTIVE
+#			detail = "button"
+#			file = "button/button-active-focus.png"
+#			border = {4, 4, 4, 4}
+#			stretch = TRUE
+#		}
     }
 }
 
 style "combo" {
-	GtkWidget::interior_focus = 1
-	GtkComboBox::appears_as_list = 1
+	text[PRELIGHT] = @black
+	GtkWidget::interior_focus = 0
+#	GtkWidget::focus_line_width = 1
+#	GtkComboBox::appears_as_list = 0
 	engine "pixmap" {
+		image 
+		{
+		}
 	}
 }
 
-class "GtkButton*" style "button"
-class "GtkComboBox*" style "combo"
+class "GtkButton" style "button"
+widget_class "*.<GtkCombo>.*" style "combo"
+widget_class "*.<GtkComboBox>.*" style "combo"
+class "GtkOptionMenu" style "combo"
 
