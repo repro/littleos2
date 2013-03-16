@@ -31,7 +31,7 @@ if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
 	cp -r littleos2-master/.??* .
 fi
 
-echo -n "Perform Xfconf setup? (Overwrites existing configuration) [Y/n]: "
+echo -n "Perform Xfconf setup? (overwrites existing configuration) [Y/n]: "
 read ANSWER
 if [ "$ANSWER" == "y" ] || [ "$ANSWER" == "Y" ] || [ "$ANSWER" == "" ]; then
 xfconf-query -c pointers -p /devwsmouse/RightHanded -s "false" -t bool -n
@@ -161,8 +161,8 @@ xfconf-query -c xsettings -p /Xft/RGBA -s "none" -t string -n
 #xfconf-query -c xsettings -p /Xft/Hinting -s "-1" -n
 fi
 
-xfce4-panel --restart
-xfdesktop --reload
+xfce4-panel --restart &
+xfdesktop --reload &
 
 echo -n "Remove temporary install files (master.zip, littleos2-master)? [Y/n]: "
 read ANSWER
