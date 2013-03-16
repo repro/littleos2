@@ -1,0 +1,67 @@
+style "button"
+{
+	GtkWidget::interior_focus = 0
+#	GtkWidget::focus_padding = 2
+
+	engine "pixmap" 
+    {
+		image 
+		{
+			function = BOX
+			state = NORMAL
+			file = "button/button.png"
+			border = {4, 4, 4, 4}
+			stretch = TRUE
+		}
+		image 
+		{
+			function = BOX
+			state = PRELIGHT
+			file = "button/button.png"
+			border = {4, 4, 4, 4}
+			stretch = TRUE
+		}
+		image 
+		{
+			function = BOX
+			state = INSENSITIVE
+			file = "button/button-insensitive.png"
+			border = {4, 4, 4, 4}
+			stretch = TRUE
+		}
+		image 
+		{
+			function = BOX
+			state = ACTIVE
+			file = "button/button-active.png"
+			border = {4, 4, 4, 4}
+			stretch = TRUE
+		}
+		image 
+		{
+			function = FOCUS
+			detail = "button"
+			file = "button/button-focus.png"
+			border = {4, 4, 4, 4}
+			stretch = TRUE
+		}
+    }
+}
+
+style "combo" {
+	GtkComboBox::appears_as_list = 1
+	engine "pixmap" {
+		image 
+		{
+			function = FOCUS
+			detail = "button"
+			file = "button/button-focus.png"
+			border = {0,0,0,0}
+			stretch = FALSE
+		}
+	}
+}
+
+class "GtkButton*" style "button"
+class "GtkComboBox" style "combo"
+
