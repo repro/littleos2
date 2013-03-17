@@ -1,0 +1,40 @@
+style "panel" {
+    engine "pixmap" {
+        image {
+            function = BOX
+            state = NORMAL
+            file = "panel/button.png"
+            border = {1,1,2,1}
+            stretch = TRUE
+        }
+        image {
+            function = BOX
+            state = PRELIGHT
+            file = "panel/button.png"
+            border = {1,1,2,1}
+            stretch = TRUE
+        }
+        image {
+            function = BOX
+            state = INSENSITIVE
+            file = "panel/button.png"
+            border = {1,1,2,1}
+            stretch = TRUE
+        }
+        image {
+            function = BOX
+            state = ACTIVE
+            file = "panel/button.png"
+            border = {1,1,2,1}
+            stretch = TRUE
+        }
+	}
+}
+
+widget_class "*Panel*" style "panel"
+widget "*PanelWidget*" style "panel"
+widget "*PanelApplet*" style "panel"
+widget "*Panel*" style "panel"
+class "*Panel*" style "panel"
+class "XfcePanelWindow" style "panel"
+

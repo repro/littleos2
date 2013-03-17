@@ -78,6 +78,7 @@ include "checkbox.rc"
 include "range.rc"
 include "button.rc"
 include "progress.rc"
+include "panel.rc"
 #include "spin.rc"
 
 #class "GtkComboBox*" style "default"

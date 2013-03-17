@@ -39,9 +39,9 @@ xfconf-query -c xfce4-desktop -p /backdrop -r -R
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/backdrop-cycle-enable -s "false" -t bool -n
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/backdrop-cycle-timer -s "10" -t int -n
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/brightness -s "1" -t int -n
-xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/color-style -t int -s "0" -n
+xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/color-style -t int -s "2" -n
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/color1 -t uint16 -s 11051 -t uint16 -s 0 -t uint16 -s 43690 -t uint16 -s 65535 -n
-xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/color2 -t uint16 -s 11051 -t uint16 -s 0 -t uint16 -s 43690 -t uint16 -s 65535 -n
+xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/color2 -t uint16 -s 32896 -t uint16 -s 32896 -t uint16 -s 32896 -t uint16 -s 65535 -n
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-path -s "${HOME}/.local/share/xfce4/backdrops/BIGBLU.png" -t string -n
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-show -s "true" -t bool -n
 xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor0/image-style -s 0 -t int -n
@@ -68,7 +68,7 @@ xfconf-query -c xfce4-desktop -p /panels -r -R
 xfconf-query -c xfce4-desktop -p /plugins -r -R
 xfconf-query -c xfce4-panel -p /panels -s 1 -t int -a -n
 xfconf-query -c xfce4-panel -p /panels/panel-1/autohide -s "false" -t bool -n
-xfconf-query -c xfce4-panel -p /panels/panel-1/background-style -s "0" -t int -n
+xfconf-query -c xfce4-panel -p /panels/panel-1/background-style -s "1" -t int -n
 xfconf-query -c xfce4-panel -p /panels/panel-1/background-color -r
 xfconf-query -c xfce4-panel -p /panels/panel-1/background-color -t uint16 -s "52428" -t uint16 -s "52428" -t uint16 -s "52428" -t uint16 -s "65535" -n
 xfconf-query -c xfce4-panel -p /panels/panel-1/background-image -r
@@ -80,7 +80,7 @@ xfconf-query -c xfce4-panel -p /panels/panel-1/nrows -s "1" -t int -n
 xfconf-query -c xfce4-panel -p /panels/panel-1/plugin-ids -t int -s 1 -t int -s 2 -t int -s 3 -t int -s 4 -a -n
 xfconf-query -c xfce4-panel -p /panels/panel-1/position -s "p=4;x=0;y=0" -t string -n
 xfconf-query -c xfce4-panel -p /panels/panel-1/position-locked -s "true" -t bool -n
-xfconf-query -c xfce4-panel -p /panels/panel-1/size -s "28" -t int -n
+xfconf-query -c xfce4-panel -p /panels/panel-1/size -s "26" -t int -n
 xfconf-query -c xfce4-panel -p /plugins/plugin-1 -t string -s "applicationsmenu" -n
 xfconf-query -c xfce4-panel -p /plugins/plugin-1/show-generic-names -s "false" -t bool -n
 xfconf-query -c xfce4-panel -p /plugins/plugin-1/show-menu-icons -s "false" -t bool -n

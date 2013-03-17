@@ -4,6 +4,8 @@ style "progress"
     ythickness = 1
 	GtkProgressBar::xspacing = 7
 	GtkProgressBar::yspacing = 7
+#	GtkProgressBar::xspacing = 0
+#	GtkProgressBar::yspacing = 0
 	GtkProgressBar::min_horizontal_bar_height = 20
 	GtkProgressBar::min_horizontal_bar_width = 150
 	GtkProgressBar::min_vertical_bar_height = 80
