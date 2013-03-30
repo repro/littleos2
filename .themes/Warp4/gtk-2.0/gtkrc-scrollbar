@@ -1,23 +1,35 @@
 style "scrollbar" 
 {
-	GtkButton::default_border={0,0,0,0}
-	GtkButton::default_outside_border={0,0,0,0}
-	GtkButton::child_displacement_x=0
-  	GtkRange::stepper-size=20
-	GtkRange::stepper_spacing=0
-	GtkRange::trough_border=0
-	GtkRange::slider-width=16
-   	GtkScrollbar::min_slider_length=19
+  	GtkRange::stepper-size = 21
+	GtkRange::stepper_spacing = 0
+	GtkRange::trough_border = 0
+	GtkRange::slider-width = 16
+   	GtkScrollbar::min_slider_length = 19
+
+#	GtkButton::default_border = {0,0,0,0}
+#	GtkButton::default_outside_border = {0,0,0,0}
+#	GtkButton::child_displacement_x = 0
 	
 	engine "pixmap" 
 	{
+		# vertical scrollbar
 		image 
 		{
             function = BOX
             detail = "trough"
             file = "scrollbar/trough-v.png"
-            border = {0,0,22,22}
+            border = {0,0,22,0}
             stretch = TRUE
+            orientation = VERTICAL
+        }
+        image
+        {
+            function = SLIDER
+            file = "scrollbar/scrollbar-v.png"
+            border = {3,3,2,3}
+            stretch = TRUE
+            overlay_file = "scrollbar/thumb-v.png"
+            overlay_stretch = FALSE
             orientation = VERTICAL
         }
 		image 
@@ -84,15 +96,26 @@ style "scrollbar"
             overlay_stretch = FALSE
             arrow_direction = DOWN
         }
+
+		# horizontal scrollbar
+        image
+        {
+            function = BOX
+            detail = "trough"
+            file = "scrollbar/trough-h.png"
+            border = {22,0,0,0}
+            stretch = TRUE
+            orientation = HORIZONTAL
+        }
         image
         {
             function = SLIDER
-            file = "scrollbar/scrollbar-v.png"
-            border = {3,3,3,3}
+            file = "scrollbar/scrollbar-h.png"
+            border = {2,2,3,3}
             stretch = TRUE
-            overlay_file = "scrollbar/thumb-v.png"
+            overlay_file = "scrollbar/thumb-h.png"
             overlay_stretch = FALSE
-            orientation = VERTICAL
+            orientation = HORIZONTAL
         }
         image
         {
@@ -158,28 +181,8 @@ style "scrollbar"
             overlay_stretch = FALSE
             arrow_direction = RIGHT
         }
-        image
-        {
-            function = SLIDER
-            file = "scrollbar/scrollbar-h.png"
-            border = {2,2,2,2}
-            stretch = TRUE
-            overlay_file = "scrollbar/thumb-h.png"
-            overlay_stretch = FALSE
-            orientation = HORIZONTAL
-        }
-        image
-        {
-            function = BOX
-            detail = "trough"
-            file = "scrollbar/trough-h.png"
-            border = {22,22,0,0}
-            stretch = TRUE
-            orientation = HORIZONTAL
-        }
     }
 }
 
 class "GtkScrollbar" style "scrollbar"
-#widget_class "*Scrollbar*" style "scrollbar"
 

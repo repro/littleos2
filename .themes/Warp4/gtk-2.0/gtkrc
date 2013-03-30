@@ -72,7 +72,7 @@ widget "*tooltip*" style "tooltip"
 
 #bg_pixmap[NORMAL] = "BIGBLU.png"
 
-include "scrollbar.rc"
+include "gtkrc-scrollbar"
 include "menu.rc"
 include "checkbox.rc"
 include "range.rc"
